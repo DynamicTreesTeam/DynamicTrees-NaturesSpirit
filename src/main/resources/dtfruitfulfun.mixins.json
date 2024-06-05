@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "xueluoanping.dtfruitfulfun.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "dtfruitfulfun.refmap.json",
+  "mixins": [
+    "MixinBeeEntity",
+    "MixinFruit",
+    "MixinGiveGiftToHeroMixin",
+    "MixinHook"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

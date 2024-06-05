@@ -1,0 +1,29 @@
+{
+  "type": "fruitfulfun:hybridizing",
+  "pollens": [
+    "dynamictrees:cherry_leaves",
+    "pink_petals"
+  ],
+  "ending_step": [
+    "dynamictrees:cherry_leaves"
+  ],
+  "post": {
+    "type": "place",
+    "block": {
+      "blocks": [
+        "dtfruitfulfun:cherry"
+      ],
+      "state": {
+        "age": 0
+      },
+      "offsetY": -1
+    }
+  },
+  "conditions": [
+    {
+      "module": "fruitfulfun:bee",
+      "type": "kiwi:is_loaded"
+    }
+  ],
+  "hide_in_viewer": true
+}

@@ -1,0 +1,25 @@
+{
+  "type": "fruitfulfun:hybridizing",
+  "pollens": [
+    "dtfruitfulfun:pomelo",
+    "dtfruitfulfun:lemon",
+    "dtfruitfulfun:orange"
+  ],
+  "contextual": {
+    "type": "fruitfulfun:bee_has_trait",
+    "trait": "advanced_pollination"
+  },
+  "post": {
+    "type": "drop_item",
+    "item": "dtfruitfulfun:grapefruit_seed"
+  },
+  "conditions": [
+    {
+      "module": "fruitfulfun:bee",
+      "type": "kiwi:is_loaded"
+    }
+  ],
+  "comment": "tip.dtfruitfulfun.hybridizing",
+  "group": "dtfruitfulfun:hybridizing",
+  "ghost": true
+}

@@ -1,0 +1,24 @@
+{
+  "type": "fruitfulfun:hybridizing",
+
+  "pollens": [
+    "dtfruitfulfun:redlove",
+    "pink_petals"
+  ],
+  "ending_step": [
+    "pink_petals"
+  ],
+  "post": {
+    "type": "drop_item",
+    "item": "fruitfulfun:peach_pink_petals"
+  },
+  "conditions": [
+    {
+      "module": "fruitfulfun:bee",
+      "type": "kiwi:is_loaded"
+    }
+  ],
+  "comment": "tip.dtfruitfulfun.hybridizing",
+  "group": "dtfruitfulfun:hybridizing",
+  "ghost": true
+}

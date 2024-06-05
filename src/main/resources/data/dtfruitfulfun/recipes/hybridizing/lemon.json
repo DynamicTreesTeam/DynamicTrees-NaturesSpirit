@@ -1,0 +1,25 @@
+{
+  "type": "fruitfulfun:hybridizing",
+  "pollens": [
+    "dtfruitfulfun:lime",
+    "dtfruitfulfun:citron"
+  ],
+  "post": {
+    "type": "place",
+    "block": {
+      "blocks": [
+        "dtfruitfulfun:lemon"
+      ],
+      "state": {
+        "age": 0
+      }
+    }
+  },
+  "conditions": [
+    {
+      "module": "fruitfulfun:bee",
+      "type": "kiwi:is_loaded"
+    }
+  ],
+  "hide_in_viewer": true
+}

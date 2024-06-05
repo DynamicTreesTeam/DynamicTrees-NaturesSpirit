@@ -1,0 +1,7 @@
+{
+    "parent":"dynamictrees:item/branch",
+    "textures":{
+        "bark":"fruitfulfun:block/redlove_log",
+        "rings":"fruitfulfun:block/redlove_log_top"
+    }
+}
