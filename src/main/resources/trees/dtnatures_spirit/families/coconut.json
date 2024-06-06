@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:coconut",
+    "common_species":"dtnatures_spirit:coconut",
+    "primitive_log":"natures_spirit:coconut_log",
+    "primitive_stripped_log":"natures_spirit:stripped_coconut_log",
+    "max_branch_radius":8
+}

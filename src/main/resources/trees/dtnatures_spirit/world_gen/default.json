@@ -1,0 +1,785 @@
+[
+  {
+    "select": {
+      "name": "natures_spirit:alpine_clearings"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:larch": 1,
+          "dtnatures_spirit:fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:alpine_highlands"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:larch": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:amber_covert"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:yellow_larch": 1,
+          "dtnatures_spirit:larch": 1,
+          "dtnatures_spirit:fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:arid_highlands"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:saxaul": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:arid_savanna"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dynamictrees:acacia": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:aspen_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:aspen": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:blooming_dunes"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:palo_verde": 1,
+          "dtnatures_spirit:joshua": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:blooming_sugi_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:sugi": 1,
+          "dynamictrees:oak": 1,
+          "dynamictrees:cherry": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:boreal_taiga"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:larch": 1,
+          "dtnatures_spirit:fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:carnation_fields"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:cypress": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:chaparral"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:fir": 1,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:coniferous_covert"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:larch": 1,
+          "dtnatures_spirit:fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:cypress_fields"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:olive": 1,
+          "dtnatures_spirit:cypress": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:drylands"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:ghaf": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:eroded_river"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:fir_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:floral_ridges"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:blue_wisteria": 1,
+          "dtnatures_spirit:purple_wisteria": 1,
+          "dtnatures_spirit:pink_wisteria": 1,
+          "dtnatures_spirit:white_wisteria": 1,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:flowering_shrubland"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dynamictrees:acacia": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:golden_wilds"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:orange_maple": 1,
+          "dtnatures_spirit:yellow_maple": 1,
+          "dtnatures_spirit:red_maple": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:heather_fields"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:larch": 1,
+          "dtnatures_spirit:fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:lavender_fields"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:cypress": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:lively_dunes"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:joshua": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:maple_woodlands"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:orange_maple": 1,
+          "dtnatures_spirit:yellow_maple": 1,
+          "dtnatures_spirit:red_maple": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:marigold_meadows"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:orange_maple": 1,
+          "dtnatures_spirit:yellow_maple": 1,
+          "dtnatures_spirit:red_maple": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:marsh"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:willow": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:oak_savanna"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:prairie"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:redwood_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:redwood": 1,
+          "dynamictrees:spruce": 1,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:scorched_dunes"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dynamictrees:acacia": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:shrubby_highlands"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:saxaul": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:shrubland"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dynamictrees:acacia": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:snowy_fir_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:frosty_fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:sparse_tropical_woods"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:mahogany": 1,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:stratified_desert"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:joshua": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:sugi_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:sugi": 1,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:tropical_basin"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:mahogany": 1,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:tropical_shores"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:coconut": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:tropical_woods"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:mahogany": 1,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:tundra"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:fir": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:windswept_sugi_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:sugi": 1,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:wisteria_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:blue_wisteria": 1,
+          "dtnatures_spirit:purple_wisteria": 1,
+          "dtnatures_spirit:pink_wisteria": 1,
+          "dtnatures_spirit:white_wisteria": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:wooded_drylands"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:ghaf": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:woody_highlands"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:larch": 1,
+          "dtnatures_spirit:fir": 1,
+          "dtnatures_spirit:saxaul": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:xeric_plains"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:olive": 1,
+          "dtnatures_spirit:cypress": 1,
+          "dtnatures_spirit:cedar": 1
+        }
+      },
+      "density": [
+        1
+      ],
+      "chance": 1.0,
+      "forestness": 1.0
+    }
+  }
+]

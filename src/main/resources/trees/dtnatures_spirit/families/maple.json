@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:orange_maple",
+    "common_species":"dtnatures_spirit:orange_maple",
+    "primitive_log":"natures_spirit:maple_log",
+    "primitive_stripped_log":"natures_spirit:stripped_maple_log",
+    "max_branch_radius":8
+}

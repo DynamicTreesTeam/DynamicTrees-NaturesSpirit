@@ -1,8 +1,0 @@
-{
-    "parent":"dynamictrees:block/smartmodel/sapling",
-    "textures":{
-        "particle":"fruitfulfun:block/redlove_leaves",
-        "log":"fruitfulfun:block/redlove_log",
-        "leaves":"fruitfulfun:block/redlove_leaves"
-    }
-}

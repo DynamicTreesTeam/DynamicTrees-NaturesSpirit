@@ -1,0 +1,38 @@
+{
+    "family":"dtnatures_spirit:wisteria",
+    "tapering":0.3,
+    "signal_energy":12.0,
+    "up_probability":1,
+    "lowest_branch_height":4,
+    "growth_rate":0.8,
+    "leaves_properties":"dtnatures_spirit:wisteria",
+    "environment_factors":{
+        "cold":0.75,
+        "hot":0.5,
+        "dry":0.5,
+        "forest":1.05
+    },
+    "perfect_biomes":{
+        "types":[
+            "forest",
+            "overworld"
+        ]
+    },
+    "primitive_sapling":"natures_spirit:blue_wisteria_sapling",
+    "always_show_on_waila":true,
+    "generate_seed":true,
+    "generate_sapling":true,
+    "features": [
+        {
+            "name": "vines",
+            "properties": {
+                "quantity": 10,
+                "max_length": 16,
+                "vine_type": "ceiling",
+                "tip_block": "natures_spirit:blue_wisteria_vines",
+                "block": "natures_spirit:blue_wisteria_vines",
+                "fruiting_radius": 5
+            }
+        }
+    ]
+}

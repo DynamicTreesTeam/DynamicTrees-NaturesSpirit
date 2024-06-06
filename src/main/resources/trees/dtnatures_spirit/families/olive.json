@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:olive",
+    "common_species":"dtnatures_spirit:olive",
+    "primitive_log":"natures_spirit:olive_log",
+    "primitive_stripped_log":"natures_spirit:stripped_olive_log",
+    "max_branch_radius":8
+}

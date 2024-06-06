@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:saxaul",
+    "common_species":"dtnatures_spirit:saxaul",
+    "primitive_log":"natures_spirit:saxaul_log",
+    "primitive_stripped_log":"natures_spirit:stripped_saxaul_log",
+    "max_branch_radius":8
+}

@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:aspen",
+    "common_species":"dtnatures_spirit:aspen",
+    "primitive_log":"natures_spirit:aspen_log",
+    "primitive_stripped_log":"natures_spirit:stripped_aspen_log",
+    "max_branch_radius":8
+}

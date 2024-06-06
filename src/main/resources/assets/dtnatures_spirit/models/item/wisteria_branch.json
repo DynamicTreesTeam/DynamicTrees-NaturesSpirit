@@ -1,0 +1,7 @@
+{
+    "parent":"dynamictrees:item/branch",
+    "textures":{
+        "bark":"natures_spirit:block/wisteria_log",
+        "rings":"natures_spirit:block/wisteria_log_top"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent":"dynamictrees:item/standard_seed",
+    "textures":{
+        "layer0":"dtnatures_spirit:item/redwood_seed"
+    }
+}

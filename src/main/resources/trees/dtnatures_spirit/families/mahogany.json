@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:mahogany",
+    "common_species":"dtnatures_spirit:mahogany",
+    "primitive_log":"natures_spirit:mahogany_log",
+    "primitive_stripped_log":"natures_spirit:stripped_mahogany_log",
+    "max_branch_radius":8
+}

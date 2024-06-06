@@ -1,0 +1,8 @@
+{
+    "parent":"dynamictrees:block/smartmodel/sapling",
+    "textures":{
+        "particle":"natures_spirit:block/cedar_leaves",
+        "log":"natures_spirit:block/cedar_log",
+        "leaves":"natures_spirit:block/cedar_leaves"
+    }
+}

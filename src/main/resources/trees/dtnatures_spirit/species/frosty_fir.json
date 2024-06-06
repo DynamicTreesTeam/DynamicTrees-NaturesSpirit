@@ -1,0 +1,38 @@
+{
+  "family": "dtnatures_spirit:fir",
+  "tapering": 0.28,
+  "signal_energy": 15.0,
+  "up_probability": 4,
+  "lowest_branch_height": 3,
+  "growth_rate": 0.75,
+  "growth_logic_kit": "conifer",
+  "leaves_properties": "dtnatures_spirit:fir",
+  "environment_factors": {
+    "#forge:is_hot": 0.50,
+    "#forge:is_dry": 0.25,
+    "#forge:is_wet": 0.75
+  },
+  "perfect_biomes": {
+    "tag": "#forge:is_coniferous"
+  },
+  "always_show_on_waila": true,
+  "generate_seed": false,
+  "generate_sapling": false,
+  "acceptable_soils": [
+    "dirt_like"
+  ],
+  "world_gen_acceptable_soils": [
+    "snow_like"
+  ],
+  "features": [
+    "conifer_topper",
+    {
+      "name": "alt_leaves",
+      "properties": {
+        "alternative_leaves": "dtnatures_spirit:frosty_fir",
+        "place_chance": 0.8,
+        "quantity": 5
+      }
+    }
+  ]
+}

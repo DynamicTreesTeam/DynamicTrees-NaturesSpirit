@@ -1,0 +1,7 @@
+{
+    "loader":"dynamictrees:branch",
+    "textures":{
+        "bark":"natures_spirit:block/ghaf_log",
+        "rings":"natures_spirit:block/ghaf_log_top"
+    }
+}

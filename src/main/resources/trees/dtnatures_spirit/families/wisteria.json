@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:blue_wisteria",
+    "common_species":"dtnatures_spirit:blue_wisteria",
+    "primitive_log":"natures_spirit:wisteria_log",
+    "primitive_stripped_log":"natures_spirit:stripped_wisteria_log",
+    "max_branch_radius":8
+}

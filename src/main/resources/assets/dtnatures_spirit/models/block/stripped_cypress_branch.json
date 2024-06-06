@@ -1,0 +1,7 @@
+{
+    "loader":"dynamictrees:branch",
+    "textures":{
+        "bark":"natures_spirit:block/stripped_cypress_log",
+        "rings":"natures_spirit:block/stripped_cypress_log_top"
+    }
+}

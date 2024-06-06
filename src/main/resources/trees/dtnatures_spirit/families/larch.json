@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:larch",
+    "common_species":"dtnatures_spirit:larch",
+    "primitive_log":"natures_spirit:larch_log",
+    "primitive_stripped_log":"natures_spirit:stripped_larch_log",
+    "max_branch_radius":8
+}

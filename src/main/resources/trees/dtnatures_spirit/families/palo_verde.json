@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:palo_verde",
+    "common_species":"dtnatures_spirit:palo_verde",
+    "primitive_log":"natures_spirit:palo_verde_log",
+    "primitive_stripped_log":"natures_spirit:stripped_palo_verde_log",
+    "max_branch_radius":8
+}

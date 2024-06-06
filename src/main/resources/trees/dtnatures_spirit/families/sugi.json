@@ -1,0 +1,7 @@
+{
+    "common_leaves":"dtnatures_spirit:sugi",
+    "common_species":"dtnatures_spirit:sugi",
+    "primitive_log":"natures_spirit:sugi_log",
+    "primitive_stripped_log":"natures_spirit:stripped_sugi_log",
+    "max_branch_radius":8
+}
