@@ -1,3 +1,4 @@
 {
-    "primitive_leaves":"natures_spirit:redwood_leaves"
+    "primitive_leaves":"natures_spirit:redwood_leaves",
+    "cell_kit": "dynamictrees:conifer"
 }

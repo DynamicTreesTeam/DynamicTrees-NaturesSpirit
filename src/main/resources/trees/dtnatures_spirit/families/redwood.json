@@ -3,5 +3,7 @@
     "common_species":"dtnatures_spirit:redwood",
     "primitive_log":"natures_spirit:redwood_log",
     "primitive_stripped_log":"natures_spirit:stripped_redwood_log",
-    "max_branch_radius":8
+    "max_branch_radius":24,
+    "generate_surface_root": true,
+    "conifer_variants": true
 }
