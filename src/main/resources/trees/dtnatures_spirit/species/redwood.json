@@ -8,7 +8,7 @@
     "max_branch_radius": 24,
     "soil_longevity": 15,
     "growth_logic_kit": {
-        "name": "redwood",
+        "name": "dtnatures_spirit:redwood",
         "properties": {
         }
     },

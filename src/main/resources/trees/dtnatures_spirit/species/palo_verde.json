@@ -1,9 +1,9 @@
 {
     "family":"dtnatures_spirit:palo_verde",
     "tapering":0.8,
-    "signal_energy":15.0,
+    "signal_energy":17.0,
     "up_probability":0.5,
-    "lowest_branch_height":3,
+    "lowest_branch_height":5,
     "growth_rate":0.5,
     "leaves_properties":"dtnatures_spirit:palo_verde",
     "environment_factors":{

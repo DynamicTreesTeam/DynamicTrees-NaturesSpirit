@@ -1,3 +1,4 @@
 {
-    "primitive_leaves":"natures_spirit:mahogany_leaves"
+    "primitive_leaves":"natures_spirit:mahogany_leaves",
+    "cell_kit": "dynamictrees:dark_oak"
 }
