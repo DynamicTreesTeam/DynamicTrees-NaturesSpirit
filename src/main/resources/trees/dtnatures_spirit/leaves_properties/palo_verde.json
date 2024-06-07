@@ -1,3 +1,4 @@
 {
-    "primitive_leaves":"natures_spirit:palo_verde_leaves"
+    "primitive_leaves":"natures_spirit:palo_verde_leaves",
+    "cell_kit": "dynamictrees:acacia"
 }

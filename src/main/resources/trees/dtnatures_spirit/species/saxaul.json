@@ -1,10 +1,12 @@
 {
     "family":"dtnatures_spirit:saxaul",
-    "tapering":0.3,
-    "signal_energy":12.0,
-    "up_probability":1,
-    "lowest_branch_height":4,
-    "growth_rate":0.8,
+    "tapering": 0.5,
+    "signal_energy": 8.0,
+    "up_probability": 0.8,
+    "lowest_branch_height": 1,
+    "growth_rate": 0.7,
+    "max_branch_radius": 8,
+    "soil_longevity": 8,
     "leaves_properties":"dtnatures_spirit:saxaul",
     "environment_factors":{
         "cold":0.75,

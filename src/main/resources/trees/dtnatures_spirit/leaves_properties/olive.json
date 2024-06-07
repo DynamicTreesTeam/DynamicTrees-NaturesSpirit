@@ -1,3 +1,4 @@
 {
-    "primitive_leaves":"natures_spirit:olive_leaves"
+    "primitive_leaves":"natures_spirit:olive_leaves",
+    "cell_kit": "dynamictrees:acacia"
 }

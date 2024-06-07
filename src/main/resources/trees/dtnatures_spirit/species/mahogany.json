@@ -1,25 +1,55 @@
 {
-    "family":"dtnatures_spirit:mahogany",
-    "tapering":0.3,
-    "signal_energy":12.0,
-    "up_probability":1,
-    "lowest_branch_height":4,
-    "growth_rate":0.8,
-    "leaves_properties":"dtnatures_spirit:mahogany",
-    "environment_factors":{
-        "cold":0.75,
-        "hot":0.5,
-        "dry":0.5,
-        "forest":1.05
+    "family": "mahogany",
+    "tapering": 0.17,
+    "signal_energy": 38.0,
+    "up_probability": 10,
+    "lowest_branch_height": 8,
+    "growth_rate": 1.2,
+    "soil_longevity": 12,
+    "max_branch_radius": 24,
+    "world_gen_leaf_map_height": 40,
+    "growth_logic_kit": {
+        "name": "jungle",
+        "properties": {
+            "canopy_height": 25,
+            "branch_out_chance": 3
+        }
     },
-    "perfect_biomes":{
-        "types":[
-            "forest",
-            "overworld"
-        ]
+    "leaves_properties": "mahogany",
+    "environment_factors" : {
+        "#forge:is_cold": 0.15,
+        "#forge:is_dry": 0.2,
+        "#forge:is_hot": 1.1,
+        "#forge:is_wet": 1.1
     },
-    "primitive_sapling":"natures_spirit:mahogany_sapling",
-    "always_show_on_waila":false,
-    "generate_seed":true,
-    "generate_sapling":true
+    "perfect_biomes": { "tag": "#minecraft:is_jungle" },
+    "features" : [
+        {
+            "name": "vines",
+            "properties": {
+                "quantity": 8,
+                "max_length": 16
+            }
+        },
+        {
+            "name": "mound",
+            "properties": {
+                "mound_cutoff_radius": 999
+            }
+        },
+        {
+            "name": "roots",
+            "properties": {
+                "min_trunk_radius": 9,
+                "scale_factor": 20
+            }
+        },
+        {
+            "name": "clear_volume",
+            "properties": {
+                "height": 20
+            }
+        },
+        "bottom_flare"
+    ]
 }

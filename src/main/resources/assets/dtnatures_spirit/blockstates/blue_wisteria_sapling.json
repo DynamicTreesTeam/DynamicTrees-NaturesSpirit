@@ -1,7 +1,7 @@
 {
     "variants":{
         "":{
-            "model":"dtnatures_spirit:block/saplings/blue_wisteria"
+            "model":"dtnatures_spirit:block/saplings/wisteria"
         }
     }
 }

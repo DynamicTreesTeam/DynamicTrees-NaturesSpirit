@@ -1,11 +1,17 @@
 {
   "family": "dtnatures_spirit:fir",
-  "tapering": 0.28,
+  "tapering": 0.4,
   "signal_energy": 16.0,
   "up_probability": 3,
-  "lowest_branch_height": 4,
+  "lowest_branch_height": 3,
   "growth_rate": 0.8,
-  "growth_logic_kit": "conifer",
+  "growth_logic_kit": {
+    "name": "conifer",
+    "properties": {
+      "energy_divisor": 2.0,
+      "variate_lowest_branch": true
+    }
+  },
   "leaves_properties": "dtnatures_spirit:fir",
   "environment_factors": {
     "#forge:is_hot": 0.50,

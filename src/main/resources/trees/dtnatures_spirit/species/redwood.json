@@ -8,10 +8,8 @@
     "max_branch_radius": 24,
     "soil_longevity": 15,
     "growth_logic_kit": {
-        "name": "conifer",
+        "name": "redwood",
         "properties": {
-            "horizontal_limiter": 6,
-            "energy_divisor": 2
         }
     },
     "leaves_properties":"dtnatures_spirit:redwood",

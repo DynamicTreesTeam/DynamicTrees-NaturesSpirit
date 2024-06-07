@@ -1,3 +1,5 @@
 {
-    "primitive_leaves":"natures_spirit:cypress_leaves"
+    "primitive_leaves":"natures_spirit:cypress_leaves",
+    "smother": 3,
+    "cell_kit": "dynamictrees:conifer"
 }
