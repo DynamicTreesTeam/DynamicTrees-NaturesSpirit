@@ -1,5 +1,5 @@
 {
-    "family": "mahogany",
+    "family": "dtnatures_spirit:mahogany",
     "tapering": 0.17,
     "signal_energy": 38.0,
     "up_probability": 10,
@@ -15,7 +15,7 @@
             "branch_out_chance": 3
         }
     },
-    "leaves_properties": "mahogany",
+    "leaves_properties": "dtnatures_spirit:mahogany",
     "environment_factors" : {
         "#forge:is_cold": 0.15,
         "#forge:is_dry": 0.2,
