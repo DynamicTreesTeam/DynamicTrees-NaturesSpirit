@@ -29,14 +29,12 @@ import java.util.List;
 // Thanks supermassimo
 public class FallingPodBlock extends PodBlock implements IFallingFruit {
 
-    DamageSource damageSource;
+    protected DamageSource damageSource;
 
-    public static float randomFruitFallChance = 0.005f;
-    public static float playerDistanceToFall = 10f;
 
     public FallingPodBlock(Properties properties, Pod pod) {
         super(properties, pod);
-        DamageType damageType = new DamageType(DTNaturesSpirit.MOD_ID+".falling_fruit."+ pod.getRegistryName().getPath(), 1F);
+        DamageType damageType = new DamageType(DTNaturesSpirit.MOD_ID + ".falling_fruit." + pod.getRegistryName().getPath(), 1F);
         damageSource = new DamageSource(Holder.direct(damageType));
     }
 
@@ -49,8 +47,8 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
 
     @Override
     public void doTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
-        if (checkToFall(state, world, pos, random)){
-            //System.out.println(this.asItem());
+        if (checkToFall(state, world, pos, random)) {
+            // System.out.println(this.asItem());
             doFall(state, world, pos);
         } else
             super.doTick(state, world, pos, random);
@@ -73,9 +71,9 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
     @Override
     public int getRootY(BlockState state, Level world, BlockPos pos) {
         Direction dir = state.getValue(FallingPodBlock.FACING);
-        for (int i=0;i<20;i++){
+        for (int i = 0; i < 20; i++) {
             BlockPos pos2 = pos.offset(dir.getNormal()).below(i);
-            if (world.getBlockState(pos2).getBlock() instanceof RootyBlock){
+            if (world.getBlockState(pos2).getBlock() instanceof RootyBlock) {
                 return pos2.getY();
             }
         }
@@ -93,11 +91,11 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
     }
 
     public float getRandomFruitFallChance() {
-        return randomFruitFallChance;
+        return 0.005f;
     }
 
     @Override
     public float getPlayerDistanceToFall() {
-        return playerDistanceToFall;
+        return 12;
     }
 }

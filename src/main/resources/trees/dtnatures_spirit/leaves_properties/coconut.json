@@ -1,5 +1,4 @@
 {
-    "type": "dynamictrees:palm",
-    "primitive_leaves":"natures_spirit:coconut_leaves",
-    "cell_kit": "dynamictrees:palm"
+  "primitive_leaves": "natures_spirit:coconut_leaves",
+  "cell_kit": "dtnatures_spirit:coconut"
 }
