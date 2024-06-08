@@ -3,6 +3,7 @@ package xueluoanping.dtnatures_spirit.systems.pods;
 import com.ferreusveritas.dynamictrees.api.TreeHelper;
 import com.ferreusveritas.dynamictrees.block.PodBlock;
 import com.ferreusveritas.dynamictrees.block.branch.BranchBlock;
+import com.ferreusveritas.dynamictrees.block.leaves.DynamicLeavesBlock;
 import com.ferreusveritas.dynamictrees.block.rooty.RootyBlock;
 import com.ferreusveritas.dynamictrees.systems.pod.Pod;
 import net.minecraft.core.BlockPos;
@@ -42,7 +43,9 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
     public boolean isSupported(LevelReader world, BlockPos pos, BlockState state) {
         final BlockState branchState = world.getBlockState(pos.relative(state.getValue(HorizontalDirectionalBlock.FACING)));
         final BranchBlock branch = TreeHelper.getBranch(branchState);
-        return branch != null && branch.getRadius(branchState) <= 3;
+        if (branch != null)
+            return branch.getRadius(branchState) <= 3;
+        return branchState.getBlock() instanceof DynamicLeavesBlock;
     }
 
     @Override

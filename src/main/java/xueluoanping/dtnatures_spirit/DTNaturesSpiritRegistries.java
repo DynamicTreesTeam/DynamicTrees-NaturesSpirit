@@ -1,7 +1,9 @@
 package xueluoanping.dtnatures_spirit;
 
 import com.ferreusveritas.dynamictrees.api.cell.CellKit;
+import com.ferreusveritas.dynamictrees.api.registry.RegistryEvent;
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
+import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKit;
 import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
@@ -13,6 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import xueluoanping.dtnatures_spirit.systems.ModCellKit;
+import xueluoanping.dtnatures_spirit.systems.ModFeatureCanceller;
 import xueluoanping.dtnatures_spirit.systems.ModFeatures;
 import xueluoanping.dtnatures_spirit.systems.ModGrowthLogicKits;
 import xueluoanping.dtnatures_spirit.systems.pods.FallingPalmPod;
@@ -38,6 +41,11 @@ public class DTNaturesSpiritRegistries {
 
     }
 
+
+    @SubscribeEvent
+    public static void onFeatureCancellerRegistry(final RegistryEvent<FeatureCanceller> event) {
+        event.getRegistry().register(new ModFeatureCanceller(DTNaturesSpirit.rl( "joshua_tree_feature")));
+    }
     @SubscribeEvent
     public static void registerPodTypes(final TypeRegistryEvent<Pod> event) {
         // DTNaturesSpirit.LOGGER.debug("registerFruitTypes");

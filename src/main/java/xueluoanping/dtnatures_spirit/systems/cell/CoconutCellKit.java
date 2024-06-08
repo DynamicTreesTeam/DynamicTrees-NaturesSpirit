@@ -24,7 +24,8 @@ public class CoconutCellKit extends CellKit {
             new CoconutCell(7)
     };
 
-    private final CellKits.BasicSolver palmSolver = new CellKits.BasicSolver(new short[]{0x0514, 0x0413, 0x0312, 0x0221});
+    private final CellKits.BasicSolver palmSolver = new CellKits.BasicSolver(new short[]
+            {0x0514, 0x0413, 0x0312, 0x0221});
 
     public CoconutCellKit(ResourceLocation registryName) {
         super(registryName);

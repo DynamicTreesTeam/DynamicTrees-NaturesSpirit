@@ -3,6 +3,7 @@ package xueluoanping.dtnatures_spirit.systems.featuregen;
 import com.ferreusveritas.dynamictrees.api.TreeHelper;
 import com.ferreusveritas.dynamictrees.api.configuration.ConfigurationProperty;
 import com.ferreusveritas.dynamictrees.api.network.MapSignal;
+import com.ferreusveritas.dynamictrees.block.PodBlock;
 import com.ferreusveritas.dynamictrees.compat.season.SeasonHelper;
 import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
 import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeatureConfiguration;
@@ -65,10 +66,8 @@ public class PalmFruitGenFeature extends GenFeature {
         final LevelAccessor world = context.level();
         final BlockPos rootPos = context.pos();
         if ((TreeHelper.getRadius(world, rootPos.above()) >= configuration.get(FRUITING_RADIUS)) && context.natural() &&
-                world.getRandom().nextInt() % 16 == 0)
-        {
-            if (context.species().seasonalFruitProductionFactor(LevelContext.create(world), rootPos) > world.getRandom().nextFloat())
-            {
+                world.getRandom().nextInt() % 16 == 0) {
+            if (context.species().seasonalFruitProductionFactor(LevelContext.create(world), rootPos) > world.getRandom().nextFloat()) {
                 addFruit(configuration, context.levelContext(), rootPos, getLeavesHeight(rootPos, world).below(), false);
                 return true;
             }
@@ -112,8 +111,9 @@ public class PalmFruitGenFeature extends GenFeature {
         for (int i = 0; i < destroyer.getEnds().size(); i++) {
             Direction placeDir = CoordUtils.HORIZONTALS[world.getRandom().nextInt(4)];
             // BlockPos pos = expandRandom(configuration, world, leavesPos.offset(placeDir.getNormal()));
-            var pos = ends.get(i).offset(placeDir.getNormal());
-            if (world.getBlockState(pos).canBeReplaced()) {
+            var pos = ends.get(i).offset(placeDir.getNormal()).above();
+            var state = world.getBlockState(pos);
+            if (state.canBeReplaced() && !(state.getBlock() instanceof PodBlock)) {
                 Float seasonValue = SeasonHelper.getSeasonValue(context, rootPos);
                 Pod pod = configuration.get(POD);
                 if (worldGen) {

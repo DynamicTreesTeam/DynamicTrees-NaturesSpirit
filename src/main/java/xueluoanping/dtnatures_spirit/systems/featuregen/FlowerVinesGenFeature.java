@@ -96,9 +96,12 @@ public class FlowerVinesGenFeature extends com.ferreusveritas.dynamictrees.syste
         }
 
         if (level.isEmptyBlock(vinePos)) {
-            long seed = CoordUtils.coordHashCode(vinePos, 3) + ((ServerLevel) level).getSeed();
-            var random=new Random(seed);
-            if (random.nextBoolean()) return;
+            long seed = CoordUtils.coordHashCode(vinePos, 3);
+            if (level instanceof ServerLevel serverLevel)
+                seed += serverLevel.getSeed();
+
+            var random = new Random(seed);
+            if ((random.nextFloat() <= 0.75) && !worldgen) return;
 
             var above = getLeavesBlock(configuration, ABOVE_LEAVES);
             var top = getLeavesBlock(configuration, TOP_LEAVES);

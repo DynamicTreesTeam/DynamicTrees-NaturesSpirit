@@ -29,7 +29,7 @@
         {
             "name": "dtnatures_spirit:flower_vines",
             "properties": {
-                "quantity": 1,
+                "quantity": 4,
                 "max_length": 5,
                 "vine_type": "ceiling",
                 "tip_block": "natures_spirit:white_wisteria_vines",
