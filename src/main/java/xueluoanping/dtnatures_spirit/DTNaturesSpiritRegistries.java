@@ -1,5 +1,6 @@
 package xueluoanping.dtnatures_spirit;
 
+import com.ferreusveritas.dynamictrees.api.cell.CellKit;
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKit;
@@ -7,6 +8,7 @@ import com.ferreusveritas.dynamictrees.systems.fruit.Fruit;
 import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import xueluoanping.dtnatures_spirit.systems.ModCellKit;
 import xueluoanping.dtnatures_spirit.systems.ModFeatures;
 import xueluoanping.dtnatures_spirit.systems.ModGrowthLogicKits;
 
@@ -39,6 +41,11 @@ public class DTNaturesSpiritRegistries {
     @SubscribeEvent
     public static void onGrowthLogicKitsRegistry(final com.ferreusveritas.dynamictrees.api.registry.RegistryEvent<GrowthLogicKit> event) {
         ModGrowthLogicKits.register(event.getRegistry());
+    }
+
+    @SubscribeEvent
+    public static void onCellKitsRegistry(final com.ferreusveritas.dynamictrees.api.registry.RegistryEvent<CellKit> event) {
+        ModCellKit.register(event.getRegistry());
     }
 
 }

@@ -69,7 +69,7 @@ public class BifurcatedTreeLogic extends PalmGrowthLogic {
 
         // Disable the direction we came from
         int currentSignUsed = signal.numSteps + 1;
-        long seed=CoordUtils.coordHashCode(signal.rootPos, 3)+((ServerLevel)world).getSeed();
+        long seed = CoordUtils.coordHashCode(signal.rootPos, 3) + ((ServerLevel) world).getSeed();
         Random random_pos = new Random(seed);
         int randomHeight = Math.abs(random_pos.nextInt() % 2);
         int randomW = Math.abs(random_pos.nextInt() % 3);
@@ -80,11 +80,11 @@ public class BifurcatedTreeLogic extends PalmGrowthLogic {
         int d3 = d1 + 2 <= 5 ? d1 + 2 : d1 + 2 - 4;
         int d4 = d1 + 3 <= 5 ? d1 + 3 : d1 + 3 - 4;
         int real_turned_height = configuration.get(TURNING_HEIGHT) + randomHeight + 1;
-        float chane_to_spilt=configuration.get(CHANCE_TO_SPLIT);
+        float chane_to_spilt = configuration.get(CHANCE_TO_SPLIT);
         if (currentSignUsed == real_turned_height - 1 && signal.dir.ordinal() != d1 && signal.dir.ordinal() != d2) {
-            if (random_pos.nextFloat()/1.25f <chane_to_spilt )
+            if (random_pos.nextFloat() / 1.25f < chane_to_spilt)
                 probMap[d3] = 10;
-            if (chane_to_spilt==1)
+            if (chane_to_spilt == 1)
                 probMap[d4] = 10;
             probMap[1] = 10;
         } else if (currentSignUsed == real_turned_height && signal.dir == Direction.UP) {
