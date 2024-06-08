@@ -1,0 +1,14 @@
+{
+    "multipart":[
+        {
+            "apply":{
+                "model":"natures_spirit:block/pink_sand"
+            }
+        },
+        {
+            "apply":{
+                "model":"dynamictrees:block/roots"
+            }
+        }
+    ]
+}

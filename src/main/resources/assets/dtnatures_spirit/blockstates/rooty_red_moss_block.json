@@ -1,0 +1,14 @@
+{
+    "multipart":[
+        {
+            "apply":{
+                "model":"natures_spirit:block/red_moss_block"
+            }
+        },
+        {
+            "apply":{
+                "model":"dynamictrees:block/roots"
+            }
+        }
+    ]
+}

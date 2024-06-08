@@ -1,0 +1,7 @@
+{
+    "primitive_soil":"natures_spirit:sandy_soil",
+    "acceptable_soils":[
+        "dirt_like",
+        "sand_like"
+    ]
+}

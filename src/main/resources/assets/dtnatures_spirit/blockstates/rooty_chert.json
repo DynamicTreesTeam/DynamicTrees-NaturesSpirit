@@ -1,0 +1,14 @@
+{
+    "multipart":[
+        {
+            "apply":{
+                "model":"natures_spirit:block/chert"
+            }
+        },
+        {
+            "apply":{
+                "model":"dynamictrees:block/roots"
+            }
+        }
+    ]
+}

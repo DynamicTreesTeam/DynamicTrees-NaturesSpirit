@@ -23,7 +23,7 @@ public class DTNaturesSpirit {
     // Directly reference a log4j logger.
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public static final boolean useLogger=Objects.equals(System.getProperty("forgegradle.runs.dev"), "true");
+    public static final boolean useLogger = Objects.equals(System.getProperty("forgegradle.runs.dev"), "true");
 
     public DTNaturesSpirit() {
         // Register the setup method for modloading
@@ -43,6 +43,7 @@ public class DTNaturesSpirit {
         RegistryHandler.setup(MOD_ID);
 
 
+        DTNaturesSpiritRegistries.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
     }
 
@@ -69,7 +70,6 @@ public class DTNaturesSpirit {
         //                map(m->m.getMessageSupplier().get()).
         //                collect(Collectors.toList()));
     }
-
 
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD

@@ -1,0 +1,6 @@
+{
+    "primitive_soil":"natures_spirit:pink_sand",
+    "acceptable_soils":[
+        "sand_like"
+    ]
+}

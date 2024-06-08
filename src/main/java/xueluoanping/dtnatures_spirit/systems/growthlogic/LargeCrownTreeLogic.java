@@ -55,8 +55,11 @@ public class LargeCrownTreeLogic extends PalmGrowthLogic {
         Random random = new Random(seed);
 
         if (currentHeight>20){
-
-            probMap = new int[]{0, 0, 10, 10, 10, 10};
+            Random newRandom = new Random(CoordUtils.coordHashCode(pos, 3) + ((ServerLevel) world).getSeed());
+            probMap = new int[]{0, 0, newRandom.nextInt(10)+1,
+                    newRandom.nextInt(10)+1,
+                    newRandom.nextInt(10)+1,
+                    newRandom.nextInt(10)+1};
             probMap[originDir.ordinal()]=0;
         }
 

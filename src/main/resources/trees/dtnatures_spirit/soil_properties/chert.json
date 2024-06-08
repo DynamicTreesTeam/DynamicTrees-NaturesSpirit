@@ -1,0 +1,6 @@
+{
+    "primitive_soil":"natures_spirit:chert",
+    "acceptable_soils":[
+        "dirt_like"
+    ]
+}

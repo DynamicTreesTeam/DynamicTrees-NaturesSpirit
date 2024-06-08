@@ -1,3 +1,5 @@
 {
-    "primitive_leaves":"natures_spirit:palo_verde_leaves"
+    "type": "scruffy",
+    "primitive_leaves":"natures_spirit:palo_verde_leaves",
+    "smother": 3
 }

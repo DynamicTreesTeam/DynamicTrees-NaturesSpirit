@@ -1,6 +1,6 @@
 {
   "primitive_leaves": "natures_spirit:joshua_leaves",
-  "cell_kit": "dynamictrees:acacia",
+  "cell_kit": "dtnatures_spirit:single",
   "smother": 1,
   "light_requirement": 14
 }

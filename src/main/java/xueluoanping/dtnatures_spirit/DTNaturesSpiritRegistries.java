@@ -4,17 +4,30 @@ import com.ferreusveritas.dynamictrees.api.cell.CellKit;
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKit;
-import com.ferreusveritas.dynamictrees.systems.fruit.Fruit;
 import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
+import com.ferreusveritas.dynamictrees.systems.pod.Pod;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import xueluoanping.dtnatures_spirit.systems.ModCellKit;
 import xueluoanping.dtnatures_spirit.systems.ModFeatures;
 import xueluoanping.dtnatures_spirit.systems.ModGrowthLogicKits;
+import xueluoanping.dtnatures_spirit.systems.pods.FallingPalmPod;
 
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DTNaturesSpiritRegistries {
+
+    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, DTNaturesSpirit.MOD_ID);
+
+    public static final RegistryObject<SoundEvent> FRUIT_BONK = registerSound("falling_fruit.bonk");
+
+    public static RegistryObject<SoundEvent> registerSound (String name){
+        return SOUNDS.register(name, ()-> SoundEvent.createVariableRangeEvent(DTNaturesSpirit.rl(name)));
+    }
 
     @SubscribeEvent
     public static void registerLeavesPropertiesTypes(final TypeRegistryEvent<LeavesProperties> event) {
@@ -26,9 +39,9 @@ public class DTNaturesSpiritRegistries {
     }
 
     @SubscribeEvent
-    public static void registerFruitTypes(final TypeRegistryEvent<Fruit> event) {
+    public static void registerPodTypes(final TypeRegistryEvent<Pod> event) {
         // DTNaturesSpirit.LOGGER.debug("registerFruitTypes");
-        // event.registerType(new ResourceLocation(DTNaturesSpirit.MOD_ID, "fly_passable"), FruitTypes.TYPE);
+        event.registerType(DTNaturesSpirit.rl( "falling_palm"), FallingPalmPod.TYPE);
         // event.registerType(new ResourceLocation(DTNaturesSpirit.MOD_ID, "named_fruit"), NamedFruitTypes.TYPE);
     }
 
