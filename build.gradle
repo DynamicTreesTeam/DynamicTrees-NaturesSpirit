@@ -73,6 +73,7 @@ minecraft {
             // Export mixin-changed classes
             property 'mixin.debug.export', 'true'
 
+            jvmArgs "-Xmx2048M"
             // Add mixin config to runtime
 //            args '-mixin.config=' + project.getProperty('mod_id') + '.mixins.json'
 
@@ -82,6 +83,7 @@ minecraft {
                     source sourceSets.onlyMain
                 }
             }
+
 
         }
 
