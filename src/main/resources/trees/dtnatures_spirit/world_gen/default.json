@@ -6,14 +6,15 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:larch": 1,
-          "dtnatures_spirit:fir": 1
+          "dtnatures_spirit:larch": 5,
+          "dtnatures_spirit:fir": 4,
+          "dynamictrees:spruce": 1
         }
       },
       "density": [
-        1
+        0.5
       ],
-      "chance": 1.0,
+      "chance": 0.25,
       "forestness": 1.0
     }
   },
@@ -28,9 +29,9 @@
         }
       },
       "density": [
-        1
+        0.7
       ],
-      "chance": 1.0,
+      "chance": 0.6,
       "forestness": 1.0
     }
   },
@@ -41,15 +42,15 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:yellow_larch": 1,
-          "dtnatures_spirit:larch": 1,
-          "dtnatures_spirit:fir": 1
+          "dtnatures_spirit:yellow_larch": 3,
+          "dtnatures_spirit:larch": 5,
+          "dtnatures_spirit:fir": 2
         }
       },
       "density": [
-        1
+        0.75
       ],
-      "chance": 1.0,
+      "chance": 0.8,
       "forestness": 1.0
     }
   },
@@ -64,9 +65,9 @@
         }
       },
       "density": [
-        1
+        0.6
       ],
-      "chance": 1.0,
+      "chance": 0.6,
       "forestness": 1.0
     }
   },
@@ -81,9 +82,9 @@
         }
       },
       "density": [
-        1
+        0.8
       ],
-      "chance": 1.0,
+      "chance": 0.7,
       "forestness": 1.0
     }
   },
@@ -98,9 +99,27 @@
         }
       },
       "density": [
+        0.85
+      ],
+      "chance": 0.9,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:bamboo_wetlands"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dynamictrees:mega_jungle": 1,
+          "dynamictrees:jungle": 2
+        }
+      },
+      "density": [
         1
       ],
-      "chance": 1.0,
+      "chance": 0.98,
       "forestness": 1.0
     }
   },
@@ -116,9 +135,9 @@
         }
       },
       "density": [
-        1
+        0.8
       ],
-      "chance": 1.0,
+      "chance": 0.3,
       "forestness": 1.0
     }
   },
@@ -129,15 +148,15 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:sugi": 1,
-          "dynamictrees:oak": 1,
+          "dtnatures_spirit:sugi": 4,
+          "dynamictrees:oak": 2,
           "dynamictrees:cherry": 1
         }
       },
       "density": [
-        1
+        1.1
       ],
-      "chance": 1.0,
+      "chance": 0.95,
       "forestness": 1.0
     }
   },
@@ -148,14 +167,15 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:larch": 1,
-          "dtnatures_spirit:fir": 1
+          "dtnatures_spirit:larch": 5,
+          "dtnatures_spirit:fir": 4,
+          "dynamictrees:spruce": 1
         }
       },
       "density": [
-        1
+        0.85
       ],
-      "chance": 1.0,
+      "chance": 0.95,
       "forestness": 1.0
     }
   },
@@ -170,9 +190,9 @@
         }
       },
       "density": [
-        1
+        0.15
       ],
-      "chance": 1.0,
+      "chance": 0.7,
       "forestness": 1.0
     }
   },
@@ -183,14 +203,14 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:fir": 1,
+          "dtnatures_spirit:fir": 3,
           "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.5
       ],
-      "chance": 1.0,
+      "chance": 0.7,
       "forestness": 1.0
     }
   },
@@ -201,14 +221,15 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:larch": 1,
-          "dtnatures_spirit:fir": 1
+          "dtnatures_spirit:larch": 5,
+          "dtnatures_spirit:fir": 4,
+          "dynamictrees:spruce": 1
         }
       },
       "density": [
-        1
+        0.85
       ],
-      "chance": 1.0,
+      "chance": 0.95,
       "forestness": 1.0
     }
   },
@@ -224,9 +245,9 @@
         }
       },
       "density": [
-        1
+        0.19
       ],
-      "chance": 1.0,
+      "chance": 0.75,
       "forestness": 1.0
     }
   },
@@ -241,9 +262,9 @@
         }
       },
       "density": [
-        1
+        0.5
       ],
-      "chance": 1.0,
+      "chance": 0.25,
       "forestness": 1.0
     }
   },
@@ -258,9 +279,9 @@
         }
       },
       "density": [
-        1
+        0.75
       ],
-      "chance": 1.0,
+      "chance": 0.5,
       "forestness": 1.0
     }
   },
@@ -275,9 +296,9 @@
         }
       },
       "density": [
-        1
+        0.85
       ],
-      "chance": 1.0,
+      "chance": 0.89,
       "forestness": 1.0
     }
   },
@@ -288,17 +309,17 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:blue_wisteria": 1,
-          "dtnatures_spirit:purple_wisteria": 1,
+          "dtnatures_spirit:blue_wisteria": 2,
+          "dtnatures_spirit:purple_wisteria": 2,
           "dtnatures_spirit:pink_wisteria": 1,
-          "dtnatures_spirit:white_wisteria": 1,
+          "dtnatures_spirit:white_wisteria": 2,
           "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.78
       ],
-      "chance": 1.0,
+      "chance": 0.75,
       "forestness": 1.0
     }
   },
@@ -313,9 +334,9 @@
         }
       },
       "density": [
-        1
+        0.4
       ],
-      "chance": 1.0,
+      "chance": 0.5,
       "forestness": 1.0
     }
   },
@@ -326,15 +347,16 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:orange_maple": 1,
-          "dtnatures_spirit:yellow_maple": 1,
-          "dtnatures_spirit:red_maple": 1
+          "dtnatures_spirit:orange_maple": 2,
+          "dtnatures_spirit:yellow_maple": 3,
+          "dtnatures_spirit:red_maple": 2,
+          "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.9
       ],
-      "chance": 1.0,
+      "chance": 0.8,
       "forestness": 1.0
     }
   },
@@ -345,14 +367,15 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:larch": 1,
-          "dtnatures_spirit:fir": 1
+          "dtnatures_spirit:larch": 5,
+          "dtnatures_spirit:fir": 4,
+          "dynamictrees:spruce": 1
         }
       },
       "density": [
-        1
+        0.2
       ],
-      "chance": 1.0,
+      "chance": 0.8,
       "forestness": 1.0
     }
   },
@@ -367,9 +390,9 @@
         }
       },
       "density": [
-        1
+        0.9
       ],
-      "chance": 1.0,
+      "chance": 0.3,
       "forestness": 1.0
     }
   },
@@ -384,9 +407,9 @@
         }
       },
       "density": [
-        1
+        0.18
       ],
-      "chance": 1.0,
+      "chance": 0.8,
       "forestness": 1.0
     }
   },
@@ -397,15 +420,16 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:orange_maple": 1,
-          "dtnatures_spirit:yellow_maple": 1,
-          "dtnatures_spirit:red_maple": 1
+          "dtnatures_spirit:orange_maple": 3,
+          "dtnatures_spirit:yellow_maple": 2,
+          "dtnatures_spirit:red_maple": 3,
+          "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.95
       ],
-      "chance": 1.0,
+      "chance": 0.8,
       "forestness": 1.0
     }
   },
@@ -416,15 +440,16 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:orange_maple": 1,
-          "dtnatures_spirit:yellow_maple": 1,
-          "dtnatures_spirit:red_maple": 1
+          "dtnatures_spirit:orange_maple": 2,
+          "dtnatures_spirit:yellow_maple": 2,
+          "dtnatures_spirit:red_maple": 3,
+          "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.85
       ],
-      "chance": 1.0,
+      "chance": 0.6,
       "forestness": 1.0
     }
   },
@@ -439,9 +464,9 @@
         }
       },
       "density": [
-        1
+        1.05
       ],
-      "chance": 1.0,
+      "chance": 0.9,
       "forestness": 1.0
     }
   },
@@ -456,9 +481,9 @@
         }
       },
       "density": [
-        1
+        0.8
       ],
-      "chance": 1.0,
+      "chance": 0.6,
       "forestness": 1.0
     }
   },
@@ -473,9 +498,9 @@
         }
       },
       "density": [
-        1
+        0.9
       ],
-      "chance": 1.0,
+      "chance": 0.85,
       "forestness": 1.0
     }
   },
@@ -486,15 +511,14 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:redwood": 1,
-          "dynamictrees:spruce": 1,
+          "dtnatures_spirit:redwood": 4,
           "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.95
       ],
-      "chance": 1.0,
+      "chance": 0.98,
       "forestness": 1.0
     }
   },
@@ -509,9 +533,9 @@
         }
       },
       "density": [
-        1
+        0.7
       ],
-      "chance": 1.0,
+      "chance": 0.45,
       "forestness": 1.0
     }
   },
@@ -526,9 +550,9 @@
         }
       },
       "density": [
-        1
+        0.15
       ],
-      "chance": 1.0,
+      "chance": 0.6,
       "forestness": 1.0
     }
   },
@@ -543,9 +567,9 @@
         }
       },
       "density": [
-        1
+        0.35
       ],
-      "chance": 1.0,
+      "chance": 0.7,
       "forestness": 1.0
     }
   },
@@ -560,9 +584,9 @@
         }
       },
       "density": [
-        1
+        0.9
       ],
-      "chance": 1.0,
+      "chance": 0.78,
       "forestness": 1.0
     }
   },
@@ -573,14 +597,14 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:mahogany": 1,
-          "dynamictrees:oak": 1
+          "dtnatures_spirit:mahogany": 3,
+          "dynamictrees:acacia": 1
         }
       },
       "density": [
-        1
+        0.85
       ],
-      "chance": 1.0,
+      "chance": 0.98,
       "forestness": 1.0
     }
   },
@@ -595,9 +619,9 @@
         }
       },
       "density": [
-        1
+        0.6
       ],
-      "chance": 1.0,
+      "chance": 0.3,
       "forestness": 1.0
     }
   },
@@ -608,14 +632,14 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:sugi": 1,
+          "dtnatures_spirit:sugi": 5,
           "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.8
       ],
-      "chance": 1.0,
+      "chance": 0.8,
       "forestness": 1.0
     }
   },
@@ -626,14 +650,14 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:mahogany": 1,
+          "dtnatures_spirit:mahogany": 5,
           "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.95
       ],
-      "chance": 1.0,
+      "chance": 0.95,
       "forestness": 1.0
     }
   },
@@ -648,9 +672,9 @@
         }
       },
       "density": [
-        1
+        0.75
       ],
-      "chance": 1.0,
+      "chance": 0.5,
       "forestness": 1.0
     }
   },
@@ -661,14 +685,14 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:mahogany": 1,
+          "dtnatures_spirit:mahogany": 6,
           "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.98
       ],
-      "chance": 1.0,
+      "chance": 0.95,
       "forestness": 1.0
     }
   },
@@ -683,9 +707,9 @@
         }
       },
       "density": [
-        1
+        0.9
       ],
-      "chance": 1.0,
+      "chance": 0.4,
       "forestness": 1.0
     }
   },
@@ -696,14 +720,14 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:sugi": 1,
+          "dtnatures_spirit:sugi": 6,
           "dynamictrees:oak": 1
         }
       },
       "density": [
-        1
+        0.78
       ],
-      "chance": 1.0,
+      "chance": 0.8,
       "forestness": 1.0
     }
   },
@@ -721,9 +745,9 @@
         }
       },
       "density": [
-        1
+        0.95
       ],
-      "chance": 1.0,
+      "chance": 0.9,
       "forestness": 1.0
     }
   },
@@ -738,9 +762,9 @@
         }
       },
       "density": [
-        1
+        0.8
       ],
-      "chance": 1.0,
+      "chance": 0.39,
       "forestness": 1.0
     }
   },
@@ -751,15 +775,16 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:larch": 1,
-          "dtnatures_spirit:fir": 1,
-          "dtnatures_spirit:saxaul": 1
+          "dtnatures_spirit:larch": 5,
+          "dtnatures_spirit:fir": 4,
+          "dtnatures_spirit:saxaul": 10,
+          "dynamictrees:spruce": 1
         }
       },
       "density": [
-        1
+        0.8
       ],
-      "chance": 1.0,
+      "chance": 0.85,
       "forestness": 1.0
     }
   },
@@ -772,13 +797,13 @@
         "random": {
           "dtnatures_spirit:olive": 1,
           "dtnatures_spirit:cypress": 1,
-          "dtnatures_spirit:cedar": 1
+          "dtnatures_spirit:cedar": 4
         }
       },
       "density": [
-        1
+        0.8
       ],
-      "chance": 1.0,
+      "chance": 0.68,
       "forestness": 1.0
     }
   }

@@ -11,7 +11,7 @@
     }
   },
   {
-    "__comment": "Cancel standard tree features from the overworld in natures_spirit.",
+    "__comment": "Cancel standard joshua features from the overworld in natures_spirit.",
     "select": {
       "names_or": [
         "natures_spirit:blooming_dunes",
