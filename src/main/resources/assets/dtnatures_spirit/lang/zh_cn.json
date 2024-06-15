@@ -79,10 +79,10 @@
     "species.dtbetterend.sugi":"柳杉",
     "block.dtbetterend.willow_branch":"柳树",
     "block.dtbetterend.willow_sapling":"柳树树苗",
-    "item.dtbetterend.willow_seed":"柳种子",
+    "item.dtbetterend.willow_seed":"柳絮",
     "species.dtbetterend.willow":"柳",
     "block.dtbetterend.coconut_branch":"椰树",
-    "block.dtbetterend.coconut_sapling":"发芽椰子",
-    "item.dtbetterend.coconut_seed":"椰种子",
+    "block.dtbetterend.coconut_sapling":"椰树苗",
+    "item.dtbetterend.coconut_seed":"发芽椰子",
     "species.dtbetterend.coconut":"椰"
 }
