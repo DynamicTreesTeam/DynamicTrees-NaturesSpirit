@@ -68,22 +68,16 @@ public class PalmFruitGenFeature extends GenFeature {
         if ((TreeHelper.getRadius(world, rootPos.above()) >= configuration.get(FRUITING_RADIUS)) && context.natural() &&
                 world.getRandom().nextInt() % 16 == 0) {
             if (context.species().seasonalFruitProductionFactor(LevelContext.create(world), rootPos) > world.getRandom().nextFloat()) {
-                addFruit(configuration, context.levelContext(), rootPos, getLeavesHeight(rootPos, world).below(), false);
+                final FindEndsNode destroyer = new FindEndsNode();
+                TreeHelper.startAnalysisFromRoot(world, rootPos, new MapSignal(destroyer));
+                if (!destroyer.getEnds().isEmpty())
+                    addFruit(configuration, context.levelContext(), rootPos, destroyer.getEnds().get(0).above(), false);
                 return true;
             }
         }
         return false;
     }
 
-    private BlockPos getLeavesHeight(BlockPos rootPos, LevelAccessor world) {
-        for (int y = 1; y < 20; y++) {
-            BlockPos testPos = rootPos.above(y);
-            if ((world.getBlockState(testPos).getBlock() instanceof LeavesBlock)) {
-                return testPos;
-            }
-        }
-        return rootPos;
-    }
 
     @Override
     protected boolean postGenerate(GenFeatureConfiguration configuration, PostGenerationContext context) {
@@ -94,42 +88,33 @@ public class PalmFruitGenFeature extends GenFeature {
         qty *= context.fruitProductionFactor();
         for (int i = 0; i < qty; i++) {
             if (!context.endPoints().isEmpty() && world.getRandom().nextFloat() <= configuration.get(PLACE_CHANCE)) {
-                addFruit(configuration, context.levelContext(), rootPos, context.endPoints().get(0), true);
+                addFruit(configuration, context.levelContext(), rootPos, context.endPoints().get(0).above(), true);
                 placed = true;
             }
         }
+
         return placed;
     }
 
     protected void addFruit(GenFeatureConfiguration configuration, LevelContext context, BlockPos rootPos, BlockPos leavesPos, boolean worldGen) {
         if (rootPos.getY() == leavesPos.getY()) return;
-        final FindEndsNode destroyer = new FindEndsNode();
-        final LevelAccessor world = context.level();
-        TreeHelper.startAnalysisFromRoot(world, rootPos, new MapSignal(destroyer));
-        // final List<BlockPos> leavesPoints;
-        var ends = destroyer.getEnds();
-        for (int i = 0; i < destroyer.getEnds().size(); i++) {
-            Direction placeDir = CoordUtils.HORIZONTALS[world.getRandom().nextInt(4)];
-            // BlockPos pos = expandRandom(configuration, world, leavesPos.offset(placeDir.getNormal()));
-            var pos = ends.get(i).offset(placeDir.getNormal()).above();
+        final LevelAccessor world = context.accessor();
+        Direction placeDir = CoordUtils.HORIZONTALS[world.getRandom().nextInt(4)];
+        var pos = leavesPos.relative(placeDir);
+        // if (!worldGen)
+        {
             var state = world.getBlockState(pos);
-            if (state.canBeReplaced() && !(state.getBlock() instanceof PodBlock)) {
-                Float seasonValue = SeasonHelper.getSeasonValue(context, rootPos);
-                Pod pod = configuration.get(POD);
-                if (worldGen) {
-                    pod.placeDuringWorldGen(world, pos, seasonValue, placeDir.getOpposite(), 8);
-                } else {
-                    pod.place(world, pos, seasonValue, placeDir.getOpposite(), 8);
-                }
+            if (!state.canBeReplaced() || (state.getBlock() instanceof PodBlock)) {
+                return;
             }
+        }
+        Float seasonValue = SeasonHelper.getSeasonValue(context, rootPos);
+        Pod pod = configuration.get(POD);
+        if (worldGen) {
+            pod.placeDuringWorldGen(world, pos, seasonValue, placeDir.getOpposite(), 8);
+        } else {
+            pod.place(world, pos, seasonValue, placeDir.getOpposite(), 8);
         }
 
     }
-
-    protected BlockPos expandRandom(GenFeatureConfiguration configuration, LevelAccessor world, BlockPos startingPos) {
-        int fullHeight = 1 + configuration.get(EXPAND_UP_FRUIT_HEIGHT) + configuration.get(EXPAND_DOWN_FRUIT_HEIGHT);
-        return startingPos.below(configuration.get(EXPAND_DOWN_FRUIT_HEIGHT))
-                .above(world.getRandom().nextInt(fullHeight));
-    }
-
 }

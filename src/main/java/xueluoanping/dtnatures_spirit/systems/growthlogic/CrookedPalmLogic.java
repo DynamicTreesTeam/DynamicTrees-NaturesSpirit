@@ -59,23 +59,32 @@ public class CrookedPalmLogic extends PalmGrowthLogic {
         // Start by disabling probability on the sides
         probMap[2] = probMap[3] = probMap[4] = probMap[5] = 0;
 
-        long seed = CoordUtils.coordHashCode(signal.rootPos, 3) + ((ServerLevel) world).getSeed();
-        Random random = new Random(seed);
+        int diverge = (int) (4 / configuration.get(CHANCE_TO_DIVERGE));
+        int split = (int) (1 / configuration.get(CHANCE_TO_SPLIT));
+        int randCoordCode = Math.abs(CoordUtils.coordHashCode(pos, 2));
+
+        int directionSelection = randCoordCode % diverge;
+        int splitSelection = randCoordCode % split;
 
         // Disable the direction we came from
-        int randomHeight = species.getLowestBranchHeight() + random.nextInt(2);
-        int randomW = random.nextInt(2);
-        int randomDirection = 2 + random.nextInt(4);
+        int currentSignUsed = (int) (context.species().getSignalEnergy() - signal.energy);
+        int randomHeight = Math.abs(new Random(signal.rootPos.asLong()).nextInt() % 2);
+        int randomW = Math.abs(new Random(signal.rootPos.asLong()).nextInt() % 2);
 
-        int step = signal.numSteps;
-
-        if (randomHeight <= step && step <= randomHeight + randomW) {
-            probMap[randomDirection] = 10;
+        int real_turned_height = configuration.get(TURNING_HEIGHT) + randomHeight + 1;
+        real_turned_height = 4;
+        if (currentSignUsed == real_turned_height) {
+            probMap[2 + Math.min(directionSelection, 3)] = 10;
+            // probMap[2] = 1;
+        } else if (currentSignUsed > real_turned_height
+                && currentSignUsed < real_turned_height + randomW + 1) {
+            // probMap[1] = 0;
+            probMap[signal.dir.ordinal()] = 10;
         } else {
             probMap[Direction.UP.ordinal()] = species.getUpProbability();
         }
-
         return probMap;
+
     }
 
 }
