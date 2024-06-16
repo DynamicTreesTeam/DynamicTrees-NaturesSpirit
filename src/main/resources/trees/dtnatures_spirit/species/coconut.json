@@ -40,6 +40,7 @@
   "pods": [
     "dtnatures_spirit:coconut"
   ],
+  "drop_seeds": false,
   "features": [
     {
       "name": "dtnatures_spirit:palm_fruit",
