@@ -13,8 +13,5 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin({WisteriaVinePlant.class})
 public class MixinWisteriaVinePlant {
 
-    @Inject(at = @At("HEAD"), method = "canSurvive", cancellable = true)
-    private void zz$canSurvive(BlockState state, LevelReader worldIn, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        // cir.setReturnValue(true);
-    }
+
 }
