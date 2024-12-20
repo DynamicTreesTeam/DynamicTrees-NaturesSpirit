@@ -13,17 +13,10 @@
         }
     },
     "leaves_properties":"dtnatures_spirit:joshua",
-    "environment_factors":{
-        "cold":0.75,
-        "hot":0.5,
-        "dry":0.5,
-        "forest":1.05
-    },
-    "perfect_biomes":{
-        "types":[
-            "forest",
-            "overworld"
-        ]
+    "environment_factors" : {
+        "#forge:is_cold": 0.25,
+        "#is_nether": 0.75,
+        "#forge:is_wet": 0.75
     },
     "primitive_sapling":"natures_spirit:joshua_sapling",
     "always_show_on_waila":false,

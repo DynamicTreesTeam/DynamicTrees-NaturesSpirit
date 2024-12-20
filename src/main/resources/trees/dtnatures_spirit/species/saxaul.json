@@ -8,16 +8,10 @@
     "max_branch_radius": 8,
     "soil_longevity": 8,
     "leaves_properties":"dtnatures_spirit:saxaul",
-    "environment_factors":{
-        "cold":0.5,
-        "hot":1.2,
-        "dry":1.1,
-        "forest":1.05
-    },
-    "perfect_biomes":{
-        "types":[
-            "overworld"
-        ]
+    "environment_factors" : {
+        "#forge:is_cold": 0.25,
+        "#is_nether": 0.75,
+        "#forge:is_wet": 0.75
     },
     "primitive_sapling":"natures_spirit:saxaul_sapling",
     "always_show_on_waila":false,

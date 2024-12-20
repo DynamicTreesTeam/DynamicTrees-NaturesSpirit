@@ -2,7 +2,7 @@ package xueluoanping.dtnatures_spirit.util;
 
 import java.util.function.Supplier;
 
-public  class LazyGet<T> {
+public class LazyGet<T> {
     private final Supplier<T> cache;
     private T lock;
 

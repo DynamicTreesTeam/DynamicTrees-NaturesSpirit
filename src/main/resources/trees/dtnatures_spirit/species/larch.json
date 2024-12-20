@@ -7,18 +7,12 @@
     "growth_rate": 0.8,
     "growth_logic_kit": "conifer",
     "leaves_properties":"dtnatures_spirit:larch",
-    "environment_factors":{
-        "cold":0.75,
-        "hot":0.5,
-        "dry":0.5,
-        "forest":1.05
+    "environment_factors" : {
+        "#forge:is_hot": 0.50,
+        "#forge:is_dry": 0.25,
+        "#forge:is_wet": 0.75
     },
-    "perfect_biomes":{
-        "types":[
-            "forest",
-            "overworld"
-        ]
-    },
+    "perfect_biomes": { "tag": "#forge:is_coniferous" },
     "primitive_sapling":"natures_spirit:larch_sapling",
     "always_show_on_waila":false,
     "generate_seed":true,

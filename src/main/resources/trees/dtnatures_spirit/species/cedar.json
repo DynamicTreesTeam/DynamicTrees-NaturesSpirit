@@ -12,17 +12,11 @@
         }
     },
     "leaves_properties": "dtnatures_spirit:cedar",
-    "environment_factors": {
-        "cold": 0.75,
-        "hot": 0.5,
-        "dry": 0.5,
-        "forest": 1.05
-    },
-    "perfect_biomes": {
-        "types": [
-            "forest",
-            "overworld"
-        ]
+    "environment_factors" : {
+        "#forge:is_cold": 0.95,
+        "#forge:is_hot": 0.85,
+        "#forge:is_dry": 0.85,
+        "#is_forest": 1.02
     },
     "primitive_sapling": "natures_spirit:cedar_sapling",
     "always_show_on_waila": true,

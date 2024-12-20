@@ -597,8 +597,8 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:frosty_redwood": 9,
-          "dynamictrees:oak": 1
+          "dtnatures_spirit:frosty_redwood": 20,
+          "dynamictrees:spruce": 1
         }
       },
       "density": [

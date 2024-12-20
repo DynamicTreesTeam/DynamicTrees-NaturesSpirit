@@ -6,17 +6,10 @@
     "lowest_branch_height":4,
     "growth_rate":0.8,
     "leaves_properties":"dtnatures_spirit:red_maple",
-    "environment_factors":{
-        "cold":0.75,
-        "hot":0.5,
-        "dry":0.5,
-        "forest":1.05
-    },
-    "perfect_biomes":{
-        "types":[
-            "forest",
-            "overworld"
-        ]
+    "environment_factors" : {
+        "#forge:is_hot": 0.50,
+        "#forge:is_dry": 0.25,
+        "#forge:is_wet": 0.75
     },
     "primitive_sapling":"natures_spirit:red_maple_sapling",
     "always_show_on_waila":true,
