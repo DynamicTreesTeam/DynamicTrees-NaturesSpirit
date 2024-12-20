@@ -592,6 +592,24 @@
   },
   {
     "select": {
+      "name": "natures_spirit:snowy_redwood_forest"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:frosty_redwood": 9,
+          "dynamictrees:oak": 1
+        }
+      },
+      "density": [
+        0.95
+      ],
+      "chance": 0.98,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
       "name": "natures_spirit:sparse_tropical_woods"
     },
     "apply": {

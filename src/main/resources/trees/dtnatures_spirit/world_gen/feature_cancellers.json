@@ -2,12 +2,25 @@
   {
     "__comment": "Cancel standard tree features from the overworld in natures_spirit.",
     "select": {
-      "name": "natures_spirit:.*",
-      "tag": "#minecraft:is_overworld"
+      "name": "natures_spirit:.*"
     },
     "cancellers": {
       "type": "tree",
       "namespace": "minecraft"
+    }
+  },
+  {
+    "__comment": "Cancel standard joshua features from the overworld in natures_spirit.",
+    "select": {
+      "names_or": [
+        "natures_spirit:blooming_dunes",
+        "natures_spirit:lively_dunes",
+        "natures_spirit:stratified_desert"
+      ]
+    },
+    "cancellers": {
+      "type": "dtnatures_spirit:joshua_tree_feature",
+      "namespace": "natures_spirit"
     }
   },
   {
