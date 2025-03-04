@@ -20,7 +20,6 @@ public class DTNSLootTableProvider extends DTLootTableProvider {
         this.generator = output;
         this.subProviderEntries = List.of(new SubProviderEntry(
                 BlockLoot2::new,
-                // Loot table generator for the 'empty' param set
                 LootContextParamSets.BLOCK
         ));
 

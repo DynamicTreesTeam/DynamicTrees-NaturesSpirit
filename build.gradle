@@ -37,15 +37,20 @@ repositories {
 }
 
 base {
-    archivesName = mod_id
+//    archivesName = mod_id
+    version = "${minecraft_version}-neoforge-${mod_version}"
+    group = "${mod_group_id}" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+    archivesName = mod_name
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
-//sourceSets {
-//    onlyMain {
-//    }
-//}
+sourceSets {
+    onlyMain {
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.runtimeClasspath
+    }
+}
 
 neoForge {
     // Specify the version of NeoForge to use.
@@ -68,7 +73,7 @@ neoForge {
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
 
-//            sourceSet = sourceSets.onlyMain
+            sourceSet = sourceSets.onlyMain
         }
 
         server {
@@ -135,14 +140,13 @@ dependencies {
 
     implementation "curse.maven:dynamictrees-252818:6196673"
 
-    implementation("curse.maven:jei-238222:5606861")
-//    implementation ("curse.maven:jade-324717:4654448")
-    implementation("curse.maven:jade-324717:5591256-deobf-sources-api")
+    onlyMainRuntimeOnly("curse.maven:jei-238222:5606861")
+    onlyMainRuntimeOnly("curse.maven:jade-324717:5591256-deobf-sources-api")
 
-    runtimeOnly("curse.maven:irisshaders-455508:6117625")
-    runtimeOnly "maven.modrinth:sodium:mc1.21.1-0.6.9-neoforge"
+    onlyMainRuntimeOnly("curse.maven:irisshaders-455508:6117625")
+    onlyMainRuntimeOnly "maven.modrinth:sodium:mc1.21.1-0.6.9-neoforge"
 
-    runtimeOnly("curse.maven:journeymap-32274:5541925")
+    onlyMainRuntimeOnly("curse.maven:journeymap-32274:5541925")
 
 //    implementation "curse.maven:natures-spirit-1044992:6201808"
 
