@@ -1,0 +1,124 @@
+{
+  "values": [
+    {
+      "id": "dtnatures_spirit:aspen_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:blue_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:cedar_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:coconut_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:cypress_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:fir_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:frosty_fir_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:frosty_redwood_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:ghaf_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:joshua_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:larch_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:mahogany_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:olive_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:orange_maple_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:palo_verde_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:part_blue_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:part_pink_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:part_purple_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:part_white_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:pink_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:purple_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:redwood_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:red_maple_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:saxaul_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:sugi_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:white_wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:willow_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:wisteria_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:yellow_larch_leaves",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:yellow_maple_leaves",
+      "required": false
+    }
+  ]
+}

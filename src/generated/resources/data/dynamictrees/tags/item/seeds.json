@@ -1,0 +1,104 @@
+{
+  "values": [
+    {
+      "id": "dtnatures_spirit:aspen_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:blue_wisteria_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:cedar_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:coconut_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:cypress_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:fir_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:frosty_fir_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:frosty_redwood_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:ghaf_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:joshua_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:larch_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:mahogany_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:olive_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:orange_maple_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:palo_verde_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:pink_wisteria_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:purple_wisteria_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:redwood_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:red_maple_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:saxaul_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:sugi_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:white_wisteria_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:willow_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:yellow_larch_seed",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:yellow_maple_seed",
+      "required": false
+    }
+  ]
+}

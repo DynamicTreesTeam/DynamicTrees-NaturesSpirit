@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "dtnatures_spirit:rooty_chert",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:rooty_pink_sand",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:rooty_red_moss_block",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:rooty_sandy_soil",
+      "required": false
+    }
+  ]
+}

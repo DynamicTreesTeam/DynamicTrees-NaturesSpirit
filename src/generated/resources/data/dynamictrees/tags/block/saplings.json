@@ -1,0 +1,104 @@
+{
+  "values": [
+    {
+      "id": "dtnatures_spirit:aspen_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:blue_wisteria_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:cedar_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:coconut_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:cypress_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:fir_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:frosty_fir_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:frosty_redwood_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:ghaf_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:joshua_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:larch_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:mahogany_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:olive_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:orange_maple_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:palo_verde_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:pink_wisteria_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:purple_wisteria_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:redwood_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:red_maple_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:saxaul_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:sugi_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:white_wisteria_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:willow_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:yellow_larch_sapling",
+      "required": false
+    },
+    {
+      "id": "dtnatures_spirit:yellow_maple_sapling",
+      "required": false
+    }
+  ]
+}

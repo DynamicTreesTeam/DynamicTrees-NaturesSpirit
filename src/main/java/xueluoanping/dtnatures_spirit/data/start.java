@@ -1,17 +1,17 @@
 package xueluoanping.dtnatures_spirit.data;
 
 
-import com.dtteam.dynamictrees.data.provider.DTBlockTagsProvider;
-import com.dtteam.dynamictrees.data.provider.DTItemTagsProvider;
+import com.dtteam.dynamictrees.data.GatherDataHelper;
+import com.dtteam.dynamictrees.treepack.Resources;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import xueluoanping.dtnatures_spirit.DTNaturesSpirit;
-import xueluoanping.dtnatures_spirit.data.lang.Lang_EN;
-import xueluoanping.dtnatures_spirit.data.lang.Lang_ZH;
-import xueluoanping.dtnatures_spirit.data.loot.DTFTLootTableProvider;
+import xueluoanping.dtnatures_spirit.data.loot.DTNSLootTableProvider;
+import xueluoanping.dtnatures_spirit.data.tag.DTNSBlockTagsProvider;
+import xueluoanping.dtnatures_spirit.data.tag.DTNSItemTagsProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -26,20 +26,18 @@ public class start {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         if (event.includeServer()) {
             DTNaturesSpirit.logger("Generate recipe");
+            Resources.MANAGER.reload(Resources.MANAGER.prepareReload(null, null));
+            String modId = DTNaturesSpirit.MOD_ID;
 
-            // work it until 1.21
-            // generator.addProvider(event.includeServer(),new RecipeDataProvider(packOutput));
-
-            DTBlockTagsProvider blockTags = new DTBlockTagsProvider(packOutput,lookupProvider);
-            generator.addProvider(event.includeServer(),blockTags);
-            generator.addProvider(event.includeServer(),new DTItemTagsProvider(packOutput, MODID, lookupProvider, blockTags.contentsGetter(), helper));
-
-            generator.addProvider(event.includeServer(),new DTFTLootTableProvider(packOutput,MODID,helper,lookupProvider));
+            DTNSBlockTagsProvider blockTags = new DTNSBlockTagsProvider(packOutput, lookupProvider,modId,helper);
+            generator.addProvider(event.includeServer(), blockTags);
+            generator.addProvider(event.includeServer(), new DTNSItemTagsProvider(packOutput, MODID, lookupProvider, blockTags.contentsGetter(), helper));
+            //
+            generator.addProvider(event.includeServer(), new DTNSLootTableProvider(packOutput, MODID, helper, lookupProvider));
             // generator.addProvider(new GLMProvider(generator, MODID));
 
 
-
-            // generator.addProvider(new SimpleMP(generator));
+            // GatherDataHelper.gatherLootData(modId, event);
 
         }
         if (event.includeClient()) {
