@@ -135,6 +135,7 @@ dependencies {
     additionalRuntimeClasspath  "curse.maven:sinytra-connector-890127:6237027"
     runtimeOnly "curse.maven:connector-extras-913445:5618470"
     runtimeOnly "curse.maven:forgified-fabric-api-889079:6136650"
+//    natures-spirit would carry a night config, so we need to delete it
     runtimeOnly "maven.modrinth:natures-spirit:2.2.1-1.21.1"
     runtimeOnly "curse.maven:terrablender-neoforge-940057:6054947"
 
