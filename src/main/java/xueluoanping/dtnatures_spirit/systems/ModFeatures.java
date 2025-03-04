@@ -1,8 +1,8 @@
 package xueluoanping.dtnatures_spirit.systems;
 
 
-import com.ferreusveritas.dynamictrees.api.registry.Registry;
-import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
+import com.dtteam.dynamictrees.api.registry.Registry;
+import com.dtteam.dynamictrees.systems.genfeature.GenFeature;
 
 import net.minecraft.resources.ResourceLocation;
 import xueluoanping.dtnatures_spirit.DTNaturesSpirit;
@@ -17,7 +17,7 @@ public class ModFeatures {
     public static final GenFeature SPINE = new FeatureGenSpine(regName("spine"));
 
     private static ResourceLocation regName(String name) {
-        return new ResourceLocation(DTNaturesSpirit.MOD_ID, name);
+        return DTNaturesSpirit.rl(name);
     }
 
     public static void register(final Registry<GenFeature> registry) {

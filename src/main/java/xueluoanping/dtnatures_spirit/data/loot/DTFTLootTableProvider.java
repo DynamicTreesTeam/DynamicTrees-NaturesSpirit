@@ -1,11 +1,13 @@
 package xueluoanping.dtnatures_spirit.data.loot;
 
 
-import com.ferreusveritas.dynamictrees.data.provider.DTLootTableProvider;
-import com.ferreusveritas.dynamictrees.resources.Resources;
+
+import com.dtteam.dynamictrees.data.provider.DTLootTableProvider;
+import com.dtteam.dynamictrees.treepack.Resources;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -19,11 +21,11 @@ public class DTFTLootTableProvider extends DTLootTableProvider {
     private final String modId;
     private final ExistingFileHelper existingFileHelper;
 
-    public DTFTLootTableProvider(PackOutput generator, String modId, ExistingFileHelper existingFileHelper) {
-        super(generator, modId, existingFileHelper);
-        this.generator = generator;
+    public DTFTLootTableProvider(PackOutput output, String modId, ExistingFileHelper fileHelper, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, modId, fileHelper, registries);
+        this.generator = output;
         this.modId = modId;
-        this.existingFileHelper = existingFileHelper;
+        this.existingFileHelper = fileHelper;
     }
 
     // The reason why these functions appear is that

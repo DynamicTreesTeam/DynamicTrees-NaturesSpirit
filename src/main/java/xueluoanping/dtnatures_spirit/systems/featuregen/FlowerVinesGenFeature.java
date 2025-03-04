@@ -1,12 +1,11 @@
 package xueluoanping.dtnatures_spirit.systems.featuregen;
 
-import com.ferreusveritas.dynamictrees.api.configuration.ConfigurationProperty;
-import com.ferreusveritas.dynamictrees.block.leaves.DynamicLeavesBlock;
-import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
-import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeatureConfiguration;
-import com.ferreusveritas.dynamictrees.tree.species.Species;
-import com.ferreusveritas.dynamictrees.util.CoordUtils;
-import com.ferreusveritas.dynamictrees.util.SafeChunkBounds;
+import com.dtteam.dynamictrees.api.configuration.ConfigurationProperty;
+import com.dtteam.dynamictrees.block.leaves.DynamicLeavesBlock;
+import com.dtteam.dynamictrees.block.leaves.LeavesProperties;
+import com.dtteam.dynamictrees.systems.genfeature.GenFeatureConfiguration;
+import com.dtteam.dynamictrees.tree.species.Species;
+import com.dtteam.dynamictrees.utility.helper.CoordUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -20,7 +19,7 @@ import java.util.List;
 import java.util.Random;
 
 // have to fix some
-public class FlowerVinesGenFeature extends com.ferreusveritas.dynamictrees.systems.genfeature.VinesGenFeature {
+public class FlowerVinesGenFeature extends com.dtteam.dynamictrees.systems.genfeature.VinesGenFeature {
 
     public static final ConfigurationProperty<LeavesProperties> ABOVE_LEAVES = ConfigurationProperty.property("above_leaves", LeavesProperties.class);
     public static final ConfigurationProperty<Float> ABOVE_LEAVES_CHANCE = ConfigurationProperty.floatProperty("above_leaves_chance");
@@ -78,14 +77,16 @@ public class FlowerVinesGenFeature extends com.ferreusveritas.dynamictrees.syste
         return properties.getDynamicLeavesBlock().get();
     }
 
-    @Override
-    protected void addVerticalVines(GenFeatureConfiguration configuration, LevelAccessor level, Species species, BlockPos rootPos, BlockPos branchPos, SafeChunkBounds safeBounds, boolean worldgen) {
-        // Uses fruit ray trace method to grab a position under the tree's leaves.
-        BlockPos vinePos = CoordUtils.getRayTraceFruitPos(level, species, rootPos, branchPos, safeBounds);
 
-        if (!safeBounds.inBounds(vinePos, true)) {
-            return;
-        }
+
+    @Override
+    protected void addVerticalVines(GenFeatureConfiguration configuration, LevelAccessor level, Species species, BlockPos rootPos, BlockPos branchPos, boolean worldgen) {
+        // Uses fruit ray trace method to grab a position under the tree's leaves.
+        BlockPos vinePos = CoordUtils.getRayTraceFruitPos(level, species, rootPos, branchPos,worldgen);
+
+        // if (!safeBounds.inBounds(vinePos, true)) {
+        //     return;
+        // }
 
         if (configuration.get(VINE_TYPE) == VineType.FLOOR) {
             vinePos = this.findGround(level, vinePos);

@@ -1,19 +1,20 @@
 package xueluoanping.dtnatures_spirit;
 
-import com.ferreusveritas.dynamictrees.api.cell.CellKit;
-import com.ferreusveritas.dynamictrees.api.registry.RegistryEvent;
-import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
-import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;
-import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
-import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKit;
-import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
-import com.ferreusveritas.dynamictrees.systems.pod.Pod;
+
+import com.dtteam.dynamictrees.api.cell.CellKit;
+import com.dtteam.dynamictrees.api.worldgen.FeatureCanceller;
+import com.dtteam.dynamictrees.block.leaves.LeavesProperties;
+import com.dtteam.dynamictrees.block.pod.Pod;
+import com.dtteam.dynamictrees.event.RegistryEvent;
+import com.dtteam.dynamictrees.event.TypeRegistryEvent;
+import com.dtteam.dynamictrees.systems.genfeature.GenFeature;
+import com.dtteam.dynamictrees.systems.growthlogic.GrowthLogicKit;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 import xueluoanping.dtnatures_spirit.systems.ModCellKit;
 import xueluoanping.dtnatures_spirit.systems.ModFeatureCanceller;
 import xueluoanping.dtnatures_spirit.systems.ModFeatures;
@@ -21,23 +22,23 @@ import xueluoanping.dtnatures_spirit.systems.ModGrowthLogicKits;
 import xueluoanping.dtnatures_spirit.systems.pods.FallingPalmPod;
 
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class DTNaturesSpiritRegistries {
 
-    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, DTNaturesSpirit.MOD_ID);
+    public static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(Registries.SOUND_EVENT, DTNaturesSpirit.MOD_ID);
 
-    public static final RegistryObject<SoundEvent> FRUIT_BONK = registerSound("falling_fruit.bonk");
+    public static final DeferredHolder<SoundEvent, SoundEvent> FRUIT_BONK = registerSound("falling_fruit.bonk");
 
-    public static RegistryObject<SoundEvent> registerSound (String name){
+    public static DeferredHolder<SoundEvent, SoundEvent> registerSound (String name){
         return SOUNDS.register(name, ()-> SoundEvent.createVariableRangeEvent(DTNaturesSpirit.rl(name)));
     }
 
     @SubscribeEvent
     public static void registerLeavesPropertiesTypes(final TypeRegistryEvent<LeavesProperties> event) {
         DTNaturesSpirit.LOGGER.debug("registerLeavesPropertiesTypes");
-        // event.registerType(new ResourceLocation(DTNaturesSpirit.MOD_ID, "cherry"), CherryLeavesProperties.TYPE);
-        // event.registerType(new ResourceLocation(DTNaturesSpirit.MOD_ID, "fruittrees"), FruitsLeavesProperties.TYPE);
-        // event.registerType(new ResourceLocation(DTNaturesSpirit.MOD_ID, "named_cherry_leaves"), NamedVanillaCherryLeaveProperties.TYPE);
+        // event.registerType(DTNaturesSpirit.rl("cherry"), CherryLeavesProperties.TYPE);
+        // event.registerType(DTNaturesSpirit.rl("fruittrees"), FruitsLeavesProperties.TYPE);
+        // event.registerType(DTNaturesSpirit.rl("named_cherry_leaves"), NamedVanillaCherryLeaveProperties.TYPE);
 
     }
 
@@ -50,22 +51,22 @@ public class DTNaturesSpiritRegistries {
     public static void registerPodTypes(final TypeRegistryEvent<Pod> event) {
         // DTNaturesSpirit.LOGGER.debug("registerFruitTypes");
         event.registerType(DTNaturesSpirit.rl( "falling_palm"), FallingPalmPod.TYPE);
-        // event.registerType(new ResourceLocation(DTNaturesSpirit.MOD_ID, "named_fruit"), NamedFruitTypes.TYPE);
+        // event.registerType(DTNaturesSpirit.rl("named_fruit"), NamedFruitTypes.TYPE);
     }
 
 
     @SubscribeEvent
-    public static void onGenFeatureRegistry(final com.ferreusveritas.dynamictrees.api.registry.RegistryEvent<GenFeature> event) {
+    public static void onGenFeatureRegistry(final RegistryEvent<GenFeature> event) {
         ModFeatures.register(event.getRegistry());
     }
 
     @SubscribeEvent
-    public static void onGrowthLogicKitsRegistry(final com.ferreusveritas.dynamictrees.api.registry.RegistryEvent<GrowthLogicKit> event) {
+    public static void onGrowthLogicKitsRegistry(final RegistryEvent<GrowthLogicKit> event) {
         ModGrowthLogicKits.register(event.getRegistry());
     }
 
     @SubscribeEvent
-    public static void onCellKitsRegistry(final com.ferreusveritas.dynamictrees.api.registry.RegistryEvent<CellKit> event) {
+    public static void onCellKitsRegistry(final RegistryEvent<CellKit> event) {
         ModCellKit.register(event.getRegistry());
     }
 

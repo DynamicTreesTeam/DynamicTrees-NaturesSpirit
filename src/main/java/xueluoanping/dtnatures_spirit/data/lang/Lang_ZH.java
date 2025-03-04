@@ -2,7 +2,7 @@ package xueluoanping.dtnatures_spirit.data.lang;
 
 
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import xueluoanping.dtnatures_spirit.DTNaturesSpirit;
 import xueluoanping.dtnatures_spirit.ModConstants;
 

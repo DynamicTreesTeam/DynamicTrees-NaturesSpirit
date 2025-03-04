@@ -1,8 +1,8 @@
 package xueluoanping.dtnatures_spirit.systems;
 
 
-import com.ferreusveritas.dynamictrees.api.cell.CellKit;
-import com.ferreusveritas.dynamictrees.api.registry.Registry;
+import com.dtteam.dynamictrees.api.cell.CellKit;
+import com.dtteam.dynamictrees.api.registry.Registry;
 import net.minecraft.resources.ResourceLocation;
 import xueluoanping.dtnatures_spirit.DTNaturesSpirit;
 import xueluoanping.dtnatures_spirit.systems.cell.CoconutCellKit;

@@ -1,12 +1,13 @@
 package xueluoanping.dtnatures_spirit.data;
 
-import com.ferreusveritas.dynamictrees.data.provider.DTBlockTagsProvider;
-import com.ferreusveritas.dynamictrees.data.provider.DTItemTagsProvider;
+
+import com.dtteam.dynamictrees.data.provider.DTBlockTagsProvider;
+import com.dtteam.dynamictrees.data.provider.DTItemTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import xueluoanping.dtnatures_spirit.DTNaturesSpirit;
 import xueluoanping.dtnatures_spirit.data.lang.Lang_EN;
 import xueluoanping.dtnatures_spirit.data.lang.Lang_ZH;
@@ -29,11 +30,11 @@ public class start {
             // work it until 1.21
             // generator.addProvider(event.includeServer(),new RecipeDataProvider(packOutput));
 
-            DTBlockTagsProvider blockTags = new DTBlockTagsProvider(packOutput,lookupProvider, MODID, helper);
+            DTBlockTagsProvider blockTags = new DTBlockTagsProvider(packOutput,lookupProvider);
             generator.addProvider(event.includeServer(),blockTags);
             generator.addProvider(event.includeServer(),new DTItemTagsProvider(packOutput, MODID, lookupProvider, blockTags.contentsGetter(), helper));
 
-            generator.addProvider(event.includeServer(),new DTFTLootTableProvider(packOutput,MODID,helper));
+            generator.addProvider(event.includeServer(),new DTFTLootTableProvider(packOutput,MODID,helper,lookupProvider));
             // generator.addProvider(new GLMProvider(generator, MODID));
 
 

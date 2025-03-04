@@ -1,9 +1,9 @@
 package xueluoanping.dtnatures_spirit.data.lang;
 
 import net.minecraft.data.*;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.LanguageProvider;
 
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.LanguageProvider;
 
 public abstract class LangHelper extends LanguageProvider {
 	private final ExistingFileHelper helper;

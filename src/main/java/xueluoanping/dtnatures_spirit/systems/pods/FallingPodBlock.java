@@ -1,11 +1,12 @@
 package xueluoanping.dtnatures_spirit.systems.pods;
 
-import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.block.PodBlock;
-import com.ferreusveritas.dynamictrees.block.branch.BranchBlock;
-import com.ferreusveritas.dynamictrees.block.leaves.DynamicLeavesBlock;
-import com.ferreusveritas.dynamictrees.block.rooty.RootyBlock;
-import com.ferreusveritas.dynamictrees.systems.pod.Pod;
+
+import com.dtteam.dynamictrees.block.branch.BasicRootsBlock;
+import com.dtteam.dynamictrees.block.branch.BranchBlock;
+import com.dtteam.dynamictrees.block.leaves.DynamicLeavesBlock;
+import com.dtteam.dynamictrees.block.pod.Pod;
+import com.dtteam.dynamictrees.block.pod.PodBlock;
+import com.dtteam.dynamictrees.utility.helper.TreeHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
@@ -76,7 +77,7 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
         Direction dir = state.getValue(FallingPodBlock.FACING);
         for (int i = 0; i < 20; i++) {
             BlockPos pos2 = pos.offset(dir.getNormal()).below(i);
-            if (world.getBlockState(pos2).getBlock() instanceof RootyBlock) {
+            if (world.getBlockState(pos2).getBlock() instanceof BasicRootsBlock) {
                 return pos2.getY();
             }
         }

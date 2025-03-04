@@ -1,14 +1,14 @@
 package xueluoanping.dtnatures_spirit;
 
-import com.ferreusveritas.dynamictrees.api.registry.RegistryHandler;
-
-import com.ferreusveritas.dynamictrees.resources.Resources;
+import com.dtteam.dynamictrees.api.registry.RegistryHandler;
+import com.dtteam.dynamictrees.treepack.Resources;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.*;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xueluoanping.dtnatures_spirit.data.start;
@@ -25,51 +25,22 @@ public class DTNaturesSpirit {
 
     public static final boolean useLogger = Objects.equals(System.getProperty("forgegradle.runs.dev"), "true");
 
-    public DTNaturesSpirit() {
-        // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the enqueueIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+    public DTNaturesSpirit(IEventBus modEventBus, ModContainer modContainer)  {
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::gatherData);
+
+        modEventBus.addListener(this::gatherData);
 
         // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.register(this);
         // MinecraftForge.EVENT_BUS.register(TreeGrowHandler.instance);
         RegistryHandler.setup(MOD_ID);
 
 
-        DTNaturesSpiritRegistries.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        DTNaturesSpiritRegistries.SOUNDS.register(modEventBus);
 
     }
 
 
-    private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
-        //        LOGGER.info("HELLO FROM PREINIT");
-        //        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-    }
-
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
-        //        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
-    }
-
-    private void enqueueIMC(final InterModEnqueueEvent event) {
-        // some example code to dispatch IMC to another mod
-        //        InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
-    }
-
-    private void processIMC(final InterModProcessEvent event) {
-        // some example code to receive and process InterModComms from other mods
-        //        LOGGER.info("Got IMC {}", event.getIMCStream().
-        //                map(m->m.getMessageSupplier().get()).
-        //                collect(Collectors.toList()));
-    }
 
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
@@ -127,6 +98,6 @@ public class DTNaturesSpirit {
     }
 
     public static ResourceLocation rl(String name) {
-        return new ResourceLocation(DTNaturesSpirit.MOD_ID, name);
+        return  ResourceLocation.fromNamespaceAndPath(DTNaturesSpirit.MOD_ID, name);
     }
 }

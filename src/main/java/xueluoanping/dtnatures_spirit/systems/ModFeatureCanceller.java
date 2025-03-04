@@ -1,10 +1,12 @@
 package xueluoanping.dtnatures_spirit.systems;
 
-import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors;
-import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;
+
+import com.dtteam.dynamictrees.api.worldgen.BiomePropertySelectors;
+import com.dtteam.dynamictrees.api.worldgen.FeatureCanceller;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraftforge.registries.ForgeRegistries;
 import xueluoanping.dtnatures_spirit.DTNaturesSpirit;
 
 public class ModFeatureCanceller extends FeatureCanceller {
@@ -15,7 +17,7 @@ public class ModFeatureCanceller extends FeatureCanceller {
     @Override
     public boolean shouldCancel(ConfiguredFeature<?, ?> configuredFeature, BiomePropertySelectors.NormalFeatureCancellation featureCancellations) {
         // Note it not in ForgeRegistries.FEATURES
-        final ResourceLocation featureName = ForgeRegistries.FEATURES.getKey(configuredFeature.feature());
+        final ResourceLocation featureName = BuiltInRegistries.FEATURE.getKey(configuredFeature.feature());
         // DTNaturesSpirit.logger(ForgeRegistries.FEATURES.getKey(configuredFeature.feature()));
         if (featureName == null) {
             return false;
