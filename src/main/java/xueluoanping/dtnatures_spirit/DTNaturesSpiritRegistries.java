@@ -35,39 +35,39 @@ public class DTNaturesSpiritRegistries {
 
     @SubscribeEvent
     public static void registerLeavesPropertiesTypes(final TypeRegistryEvent<LeavesProperties> event) {
-        DTNaturesSpirit.LOGGER.debug("registerLeavesPropertiesTypes");
-        // event.registerType(DTNaturesSpirit.rl("cherry"), CherryLeavesProperties.TYPE);
-        // event.registerType(DTNaturesSpirit.rl("fruittrees"), FruitsLeavesProperties.TYPE);
-        // event.registerType(DTNaturesSpirit.rl("named_cherry_leaves"), NamedVanillaCherryLeaveProperties.TYPE);
 
     }
 
-
     @SubscribeEvent
     public static void onFeatureCancellerRegistry(final RegistryEvent<FeatureCanceller> event) {
+        if (event.isEntryOfType(FeatureCanceller.class))
         event.getRegistry().register(new ModFeatureCanceller(DTNaturesSpirit.rl( "joshua_tree_feature")));
     }
     @SubscribeEvent
     public static void registerPodTypes(final TypeRegistryEvent<Pod> event) {
-        // DTNaturesSpirit.LOGGER.debug("registerFruitTypes");
-        event.registerType(DTNaturesSpirit.rl( "falling_palm"), FallingPalmPod.TYPE);
-        // event.registerType(DTNaturesSpirit.rl("named_fruit"), NamedFruitTypes.TYPE);
+        if (event.isEntryOfType(Pod.class))
+            event.registerType(DTNaturesSpirit.rl( "falling_palm"), FallingPalmPod.TYPE);
     }
 
 
     @SubscribeEvent
     public static void onGenFeatureRegistry(final RegistryEvent<GenFeature> event) {
-        ModFeatures.register(event.getRegistry());
+        if (event.isEntryOfType(GenFeature.class))
+
+            ModFeatures.register(event.getRegistry());
     }
 
     @SubscribeEvent
     public static void onGrowthLogicKitsRegistry(final RegistryEvent<GrowthLogicKit> event) {
-        ModGrowthLogicKits.register(event.getRegistry());
+        if (event.isEntryOfType(GrowthLogicKit.class))
+
+            ModGrowthLogicKits.register(event.getRegistry());
     }
 
     @SubscribeEvent
     public static void onCellKitsRegistry(final RegistryEvent<CellKit> event) {
-        ModCellKit.register(event.getRegistry());
+        if (event.isEntryOfType(CellKit.class))
+            ModCellKit.register(event.getRegistry());
     }
 
 }

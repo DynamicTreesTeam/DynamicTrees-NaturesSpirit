@@ -31,7 +31,6 @@ public class DTNaturesSpirit {
         modEventBus.addListener(this::gatherData);
 
         // Register ourselves for server and other game events we are interested in
-        NeoForge.EVENT_BUS.register(this);
         // MinecraftForge.EVENT_BUS.register(TreeGrowHandler.instance);
         RegistryHandler.setup(MOD_ID);
 
