@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.78'
 //    id 'org.sinytra.adapter.userdev' version '1.2.1-SNAPSHOT'
-    id("org.sinytra.adapter.userdev") version "1.2.1-SNAPSHOT"
+//    id("org.sinytra.adapter.userdev") version "1.2.1-SNAPSHOT"
 }
 
 version = mod_version
@@ -132,11 +132,12 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    additionalRuntimeClasspath  "curse.maven:sinytra-connector-890127:6237027"
-    runtimeOnly "curse.maven:connector-extras-913445:5618470"
-    runtimeOnly "curse.maven:forgified-fabric-api-889079:6136650"
+//    additionalRuntimeClasspath  "curse.maven:sinytra-connector-890127:6237027"
+//    runtimeOnly "curse.maven:connector-extras-913445:5618470"
+//    runtimeOnly "curse.maven:forgified-fabric-api-889079:6136650"
+
 //    natures-spirit would carry a night config, so we need to delete it
-    runtimeOnly "maven.modrinth:natures-spirit:2.2.1-1.21.1"
+    implementation "maven.modrinth:natures-spirit:2.2.3-1.21.1"
     runtimeOnly "curse.maven:terrablender-neoforge-940057:6054947"
 
     implementation "curse.maven:dynamictrees-252818:6196673"

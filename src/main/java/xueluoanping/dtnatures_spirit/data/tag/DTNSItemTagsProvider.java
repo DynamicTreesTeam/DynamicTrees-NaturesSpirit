@@ -27,13 +27,13 @@ public class DTNSItemTagsProvider extends ItemTagsProvider {
 
 
     protected void addDTTags() {
-        Family.REGISTRY.dataGenerationStream(this.modId).forEach(leavesProperties ->
+        Family.REGISTRY.dataGenerationStream(this.modId).forEach(family ->
         {
-            leavesProperties.defaultBranchItemTags().forEach(blockTagKey -> tag(blockTagKey).add(leavesProperties.getBranchItem().get()));
+            family.defaultBranchItemTags().forEach(itemTagKey -> tag(itemTagKey).add(family.getBranchItem().get()));
         });
 
-        Species.REGISTRY.dataGenerationStream(this.modId).forEach(leavesProperties ->
-                leavesProperties.defaultSeedTags().forEach(blockTagKey ->  tag(blockTagKey).addOptional(leavesProperties.getSeedName())));
+        Species.REGISTRY.dataGenerationStream(this.modId).forEach(species ->
+                species.defaultSeedTags().forEach(itemTagKey ->  tag(itemTagKey).addOptional(species.getSeedName())));
 
 
     }

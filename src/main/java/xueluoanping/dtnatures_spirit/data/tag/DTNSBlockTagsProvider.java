@@ -26,17 +26,17 @@ public class DTNSBlockTagsProvider extends BlockTagsProvider {
         LeavesProperties.REGISTRY.dataGenerationStream(this.modId).forEach(leavesProperties ->
                 leavesProperties.defaultLeavesTags().forEach(blockTagKey ->  tag(blockTagKey).addOptional(leavesProperties.getBlockRegistryName())));
 
-        Family.REGISTRY.dataGenerationStream(this.modId).forEach(leavesProperties ->
+        Family.REGISTRY.dataGenerationStream(this.modId).forEach(family ->
         {
-            leavesProperties.defaultBranchTags().forEach(blockTagKey -> tag(blockTagKey).add(leavesProperties.getBranch().get()));
-            leavesProperties.defaultStrippedBranchTags().forEach(blockTagKey -> tag(blockTagKey).add(leavesProperties.getStrippedBranch().get()));
+            family.defaultBranchTags().forEach(blockTagKey -> tag(blockTagKey).add(family.getBranch().get()));
+            family.defaultStrippedBranchTags().forEach(blockTagKey -> tag(blockTagKey).add(family.getStrippedBranch().get()));
         });
 
-        Species.REGISTRY.dataGenerationStream(this.modId).forEach(leavesProperties ->
-                leavesProperties.defaultSaplingTags().forEach(blockTagKey ->  tag(blockTagKey).addOptional(leavesProperties.getSaplingRegName())));
+        Species.REGISTRY.dataGenerationStream(this.modId).forEach(species ->
+                species.defaultSaplingTags().forEach(blockTagKey ->  tag(blockTagKey).addOptional(species.getSaplingRegName())));
 
-        SoilProperties.REGISTRY.dataGenerationStream(this.modId).forEach(leavesProperties ->
-                leavesProperties.defaultSoilBlockTags().forEach(blockTagKey ->  tag(blockTagKey).addOptional(leavesProperties.getBlockRegistryName())));
+        SoilProperties.REGISTRY.dataGenerationStream(this.modId).forEach(soilProperties ->
+                soilProperties.defaultSoilBlockTags().forEach(blockTagKey ->  tag(blockTagKey).addOptional(soilProperties.getBlockRegistryName())));
 
 
     }
