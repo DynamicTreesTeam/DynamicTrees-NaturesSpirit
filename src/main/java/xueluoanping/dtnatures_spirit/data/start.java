@@ -1,7 +1,6 @@
 package xueluoanping.dtnatures_spirit.data;
 
 
-import com.dtteam.dynamictrees.data.GatherDataHelper;
 import com.dtteam.dynamictrees.treepack.Resources;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;

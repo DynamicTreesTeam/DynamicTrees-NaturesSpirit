@@ -1,5 +1,6 @@
 package xueluoanping.dtnatures_spirit.data.loot;
 
+import com.dtteam.dynamictrees.data.provider.DTBlockLootSubProvider;
 import com.dtteam.dynamictrees.data.provider.DTLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -12,8 +13,10 @@ import java.util.concurrent.CompletableFuture;
 
 public class DTNSLootTableProvider extends DTLootTableProvider {
 
+    private final String modId;
     private final PackOutput generator;
     private final List<SubProviderEntry> subProviderEntries;
+    private final ExistingFileHelper fileHelper;
 
     public DTNSLootTableProvider(PackOutput output, String modId, ExistingFileHelper fileHelper, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, modId, fileHelper, registries);
@@ -22,7 +25,8 @@ public class DTNSLootTableProvider extends DTLootTableProvider {
                 BlockLoot2::new,
                 LootContextParamSets.BLOCK
         ));
-
+        this.modId = modId;
+        this.fileHelper = fileHelper;
     }
 
     @Override
@@ -30,10 +34,10 @@ public class DTNSLootTableProvider extends DTLootTableProvider {
         return subProviderEntries;
     }
 
-    public class BlockLoot2 extends DTLootTableProvider.BlockLoot{
+    public class BlockLoot2 extends DTBlockLootSubProvider {
 
         protected BlockLoot2(HolderLookup.Provider registries) {
-            super(registries);
+            super(registries, modId, fileHelper);
         }
     }
 }

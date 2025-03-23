@@ -1,6 +1,7 @@
 package xueluoanping.dtnatures_spirit;
 
 import com.dtteam.dynamictrees.api.registry.RegistryHandler;
+import com.dtteam.dynamictrees.registry.NeoForgeRegistryHandler;
 import com.dtteam.dynamictrees.treepack.Resources;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
@@ -32,8 +33,8 @@ public class DTNaturesSpirit {
 
         // Register ourselves for server and other game events we are interested in
         // MinecraftForge.EVENT_BUS.register(TreeGrowHandler.instance);
-        RegistryHandler.setup(MOD_ID);
-
+        // RegistryHandler.setup(MOD_ID);
+        NeoForgeRegistryHandler.setup(MOD_ID,modEventBus);
 
         DTNaturesSpiritRegistries.SOUNDS.register(modEventBus);
 

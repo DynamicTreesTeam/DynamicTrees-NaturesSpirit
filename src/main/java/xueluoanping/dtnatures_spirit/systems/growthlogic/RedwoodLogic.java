@@ -9,10 +9,13 @@ import com.dtteam.dynamictrees.systems.growthlogic.PalmGrowthLogic;
 import com.dtteam.dynamictrees.systems.growthlogic.context.DirectionManipulationContext;
 import com.dtteam.dynamictrees.systems.growthlogic.context.DirectionSelectionContext;
 import com.dtteam.dynamictrees.systems.growthlogic.context.PositionalSpeciesContext;
+import com.dtteam.dynamictrees.tree.TreeHelper;
 import com.dtteam.dynamictrees.tree.species.Species;
-import com.dtteam.dynamictrees.utility.helper.CoordUtils;
-import com.dtteam.dynamictrees.utility.helper.MathHelper;
-import com.dtteam.dynamictrees.utility.helper.TreeHelper;
+// import com.dtteam.dynamictrees.utility.helper.CoordUtils;
+// import com.dtteam.dynamictrees.utility.helper.MathHelper;
+// import com.dtteam.dynamictrees.utility.helper.TreeHelper;
+import com.dtteam.dynamictrees.utility.CoordUtils;
+import com.dtteam.dynamictrees.utility.MathUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
@@ -91,7 +94,7 @@ public class RedwoodLogic extends GrowthLogicKit {
         );
 
         //Select a direction from the probability map
-        int choice = MathHelper.selectRandomFromDistribution(signal.rand,
+        int choice = MathUtils.selectRandomFromDistribution(signal.rand,
                 probMap); // Select a direction from the probability map.
         return newDirectionSelected(configuration, context,
                 Direction.values()[choice != -1 ? choice : 1]); // Default to up if things are screwy

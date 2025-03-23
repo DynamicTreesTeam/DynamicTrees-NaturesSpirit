@@ -5,10 +5,11 @@ import com.dtteam.dynamictrees.api.cell.Cell;
 import com.dtteam.dynamictrees.api.cell.CellKit;
 import com.dtteam.dynamictrees.api.cell.CellNull;
 import com.dtteam.dynamictrees.api.cell.CellSolver;
+import com.dtteam.dynamictrees.api.voxmap.SimpleVoxmap;
 import com.dtteam.dynamictrees.systems.cell.CellKits;
 import com.dtteam.dynamictrees.systems.cell.LeafClusters;
 import com.dtteam.dynamictrees.systems.cell.MatrixCell;
-import com.dtteam.dynamictrees.utility.SimpleVoxmap;
+// import com.dtteam.dynamictrees.utility.SimpleVoxmap;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 
