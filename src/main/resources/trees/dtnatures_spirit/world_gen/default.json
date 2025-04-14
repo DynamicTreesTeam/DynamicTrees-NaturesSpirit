@@ -824,5 +824,23 @@
       "chance": 0.68,
       "forestness": 1.0
     }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:cedar_thicket"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:cedar": 8,
+          "dtnatures_spirit:olive": 1
+        }
+      },
+      "density": [
+        0.95
+      ],
+      "chance": 0.98,
+      "forestness": 1.0
+    }
   }
 ]
