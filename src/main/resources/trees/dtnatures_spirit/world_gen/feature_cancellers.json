@@ -36,6 +36,18 @@
       "type": "dtnatures_spirit:joshua_tree_feature",
       "namespace": "natures_spirit"
     }
+  },
+  {
+    "__comment": "Cancel standard tree features from the cedar_thicket in natures_spirit.",
+    "select": {
+      "names_or": [
+        "natures_spirit:cedar_thicket"
+      ]
+    },
+    "cancellers": {
+      "type": "dtnatures_spirit:sub_tree",
+      "namespace": "natures_spirit"
+    }
   }
 ]
 

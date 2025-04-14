@@ -15,10 +15,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import xueluoanping.dtnatures_spirit.systems.ModCellKit;
-import xueluoanping.dtnatures_spirit.systems.ModFeatureCanceller;
-import xueluoanping.dtnatures_spirit.systems.ModFeatures;
-import xueluoanping.dtnatures_spirit.systems.ModGrowthLogicKits;
+import xueluoanping.dtnatures_spirit.systems.*;
 import xueluoanping.dtnatures_spirit.systems.pods.FallingPalmPod;
 
 
@@ -29,8 +26,8 @@ public class DTNaturesSpiritRegistries {
 
     public static final DeferredHolder<SoundEvent, SoundEvent> FRUIT_BONK = registerSound("falling_fruit.bonk");
 
-    public static DeferredHolder<SoundEvent, SoundEvent> registerSound (String name){
-        return SOUNDS.register(name, ()-> SoundEvent.createVariableRangeEvent(DTNaturesSpirit.rl(name)));
+    public static DeferredHolder<SoundEvent, SoundEvent> registerSound(String name) {
+        return SOUNDS.register(name, () -> SoundEvent.createVariableRangeEvent(DTNaturesSpirit.rl(name)));
     }
 
     @SubscribeEvent
@@ -40,13 +37,16 @@ public class DTNaturesSpiritRegistries {
 
     @SubscribeEvent
     public static void onFeatureCancellerRegistry(final RegistryEvent<FeatureCanceller> event) {
-        if (event.isEntryOfType(FeatureCanceller.class))
-        event.getRegistry().register(new ModFeatureCanceller(DTNaturesSpirit.rl( "joshua_tree_feature")));
+        if (event.isEntryOfType(FeatureCanceller.class)) {
+            event.getRegistry().register(new ModFeatureCanceller(DTNaturesSpirit.rl("joshua_tree_feature")));
+            event.getRegistry().register(new ModSubtreeFeatureCanceller(DTNaturesSpirit.rl("sub_tree")));
+        }
     }
+
     @SubscribeEvent
     public static void registerPodTypes(final TypeRegistryEvent<Pod> event) {
         if (event.isEntryOfType(Pod.class))
-            event.registerType(DTNaturesSpirit.rl( "falling_palm"), FallingPalmPod.TYPE);
+            event.registerType(DTNaturesSpirit.rl("falling_palm"), FallingPalmPod.TYPE);
     }
 
 
