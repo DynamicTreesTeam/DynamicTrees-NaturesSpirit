@@ -10,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
@@ -39,4 +40,9 @@ public class FallingPalmPod extends Pod {
         BlockState state = getStateFor(facing, getAgeForWorldGen(level, pos, seasonValue), radius);
         level.setBlock(pos, state, Block.UPDATE_CLIENTS);
     }
+    //
+    // @Override
+    // public void setBlockShapes(Direction facing, VoxelShape[] blockShapes) {
+    //     super.setBlockShapes(facing, blockShapes);
+    // }
 }

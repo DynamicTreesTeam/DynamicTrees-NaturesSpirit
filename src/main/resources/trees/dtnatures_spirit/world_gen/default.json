@@ -42,7 +42,6 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:yellow_larch": 3,
           "dtnatures_spirit:larch": 5,
           "dtnatures_spirit:fir": 2
         }
