@@ -25,6 +25,7 @@ public class DTNaturesSpirit {
 
     public static final boolean useLogger = Objects.equals(System.getProperty("forgegradle.runs.dev"), "true");
 
+    @SuppressWarnings("removal")
     public DTNaturesSpirit() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -126,6 +127,7 @@ public class DTNaturesSpirit {
 
     }
 
+    @SuppressWarnings("removal")
     public static ResourceLocation rl(String name) {
         return new ResourceLocation(DTNaturesSpirit.MOD_ID, name);
     }

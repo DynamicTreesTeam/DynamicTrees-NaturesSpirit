@@ -17,7 +17,7 @@ public class ModFeatures {
     public static final GenFeature SPINE = new FeatureGenSpine(regName("spine"));
 
     private static ResourceLocation regName(String name) {
-        return new ResourceLocation(DTNaturesSpirit.MOD_ID, name);
+        return DTNaturesSpirit.rl( name);
     }
 
     public static void register(final Registry<GenFeature> registry) {

@@ -42,7 +42,6 @@
     "apply": {
       "species": {
         "random": {
-          "dtnatures_spirit:yellow_larch": 3,
           "dtnatures_spirit:larch": 5,
           "dtnatures_spirit:fir": 2
         }
@@ -822,6 +821,24 @@
         0.8
       ],
       "chance": 0.68,
+      "forestness": 1.0
+    }
+  },
+  {
+    "select": {
+      "name": "natures_spirit:cedar_thicket"
+    },
+    "apply": {
+      "species": {
+        "random": {
+          "dtnatures_spirit:cedar": 8,
+          "dtnatures_spirit:olive": 1
+        }
+      },
+      "density": [
+        0.95
+      ],
+      "chance": 0.98,
       "forestness": 1.0
     }
   }

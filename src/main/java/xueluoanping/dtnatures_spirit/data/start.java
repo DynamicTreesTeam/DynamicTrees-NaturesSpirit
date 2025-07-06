@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import xueluoanping.dtnatures_spirit.DTNaturesSpirit;
+import xueluoanping.dtnatures_spirit.data.datapack.DatapackRegistryGenerator;
 import xueluoanping.dtnatures_spirit.data.lang.Lang_EN;
 import xueluoanping.dtnatures_spirit.data.lang.Lang_ZH;
 import xueluoanping.dtnatures_spirit.data.loot.DTFTLootTableProvider;
@@ -34,7 +35,8 @@ public class start {
             generator.addProvider(event.includeServer(),new DTItemTagsProvider(packOutput, MODID, lookupProvider, blockTags.contentsGetter(), helper));
 
             generator.addProvider(event.includeServer(),new DTFTLootTableProvider(packOutput,MODID,helper));
-            // generator.addProvider(new GLMProvider(generator, MODID));
+
+            generator.addProvider(event.includeServer(),new DatapackRegistryGenerator(packOutput, lookupProvider));
 
 
 

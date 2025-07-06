@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "xueluoanping.dtnatures_spirit.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "dtnatures_spirit.refmap.json",
+  "mixins": [
+    "data.RegistrySetBuilderMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
