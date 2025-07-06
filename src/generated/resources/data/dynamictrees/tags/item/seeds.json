@@ -93,10 +93,6 @@
       "required": false
     },
     {
-      "id": "dtnatures_spirit:yellow_larch_seed",
-      "required": false
-    },
-    {
       "id": "dtnatures_spirit:yellow_maple_seed",
       "required": false
     }

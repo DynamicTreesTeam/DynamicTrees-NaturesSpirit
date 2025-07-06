@@ -93,10 +93,6 @@
       "required": false
     },
     {
-      "id": "dtnatures_spirit:yellow_larch_sapling",
-      "required": false
-    },
-    {
       "id": "dtnatures_spirit:yellow_maple_sapling",
       "required": false
     }

@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": [
+    "natures_spirit:cedar_thicket",
+    "natures_spirit:xeric_plains"
+  ],
+  "features": [
+    "natures_spirit:dense_cedar_placed",
+    "natures_spirit:cedar_placed",
+    "natures_spirit:cedar_bush_placed",
+    "natures_spirit:olive_placed",
+    "natures_spirit:sparse_olive_placed"
+  ]
+}

@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import xueluoanping.dtnatures_spirit.DTNaturesSpirit;
+import xueluoanping.dtnatures_spirit.data.datapack.DatapackRegistryGenerator;
 import xueluoanping.dtnatures_spirit.data.loot.DTNSLootTableProvider;
 import xueluoanping.dtnatures_spirit.data.tag.DTNSBlockTagsProvider;
 import xueluoanping.dtnatures_spirit.data.tag.DTNSItemTagsProvider;
@@ -37,6 +38,7 @@ public class start {
 
 
             // GatherDataHelper.gatherLootData(modId, event);
+            generator.addProvider(event.includeServer(), new DatapackRegistryGenerator(packOutput, lookupProvider));
 
         }
         if (event.includeClient()) {

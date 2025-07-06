@@ -113,10 +113,6 @@
       "required": false
     },
     {
-      "id": "dtnatures_spirit:yellow_larch_leaves",
-      "required": false
-    },
-    {
       "id": "dtnatures_spirit:yellow_maple_leaves",
       "required": false
     }

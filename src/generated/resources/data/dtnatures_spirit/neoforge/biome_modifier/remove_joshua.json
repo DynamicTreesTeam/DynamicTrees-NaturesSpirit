@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": [
+    "natures_spirit:blooming_highlands",
+    "natures_spirit:blooming_dunes",
+    "natures_spirit:lively_dunes",
+    "natures_spirit:stratified_desert"
+  ],
+  "features": "natures_spirit:joshua_placed"
+}
