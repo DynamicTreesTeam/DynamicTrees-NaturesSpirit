@@ -6,19 +6,18 @@ import com.dtteam.dynamictrees.block.branch.BranchBlock;
 import com.dtteam.dynamictrees.block.leaves.DynamicLeavesBlock;
 import com.dtteam.dynamictrees.block.pod.Pod;
 import com.dtteam.dynamictrees.block.pod.PodBlock;
-// import com.dtteam.dynamictrees.utility.helper.TreeHelper;
 import com.dtteam.dynamictrees.tree.TreeHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Holder;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.protocol.game.DebugPackets;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -32,13 +31,11 @@ import java.util.List;
 // Thanks supermassimo
 public class FallingPodBlock extends PodBlock implements IFallingFruit {
 
-    protected DamageSource damageSource;
-
+    public static final ResourceKey<DamageType> FALLING_FRUIT =
+            ResourceKey.create(Registries.DAMAGE_TYPE, DTNaturesSpirit.rl("falling_fruit"));
 
     public FallingPodBlock(Properties properties, Pod pod) {
         super(properties, pod);
-        DamageType damageType = new DamageType(DTNaturesSpirit.MOD_ID + ".falling_fruit." + pod.getRegistryName().getPath(), 1F);
-        damageSource = new DamageSource(Holder.direct(damageType));
     }
 
     @Override
@@ -70,7 +67,11 @@ public class FallingPodBlock extends PodBlock implements IFallingFruit {
 
     @Override
     public DamageSource getDamageSource(Level level) {
-        return damageSource;
+        return new DamageSource(
+                level.registryAccess()
+                        .registryOrThrow(Registries.DAMAGE_TYPE)
+                        .getHolderOrThrow(FALLING_FRUIT)
+        );
     }
 
     @Override
